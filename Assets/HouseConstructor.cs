@@ -2,18 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HouseConstructor2 : MonoBehaviour
+public class HouseConstructor : MonoBehaviour
 {
     public int length;
     public int width;
     public Floor f;
     public House h;
     public int _currentSplitRoom = 0;
+
+    public GameObject NBlock;
+    public GameObject SBlock;
+    public GameObject EBlock;
+    public GameObject WBlock;
+
+    public GameObject NEBlock;
+    public GameObject NWBlock;
+    public GameObject SEBlock;
+    public GameObject SWBlock;
+
+    public static GameObject[] BLOCK_TYPES;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        h = new House(length,width);
+        BLOCK_TYPES = new GameObject[8];
+
+        BLOCK_TYPES[0] = NBlock;
+        BLOCK_TYPES[1] = SBlock;
+        BLOCK_TYPES[2] = EBlock;
+        BLOCK_TYPES[3] = WBlock;
+        BLOCK_TYPES[4] = NEBlock;
+        BLOCK_TYPES[5] = NWBlock;
+        BLOCK_TYPES[6] = SEBlock;
+        BLOCK_TYPES[7] = SWBlock;
+
+        h = new House(length,width, BLOCK_TYPES);
         f = h.floors[0];
+        
+
     }
 
     // Update is called once per frame
@@ -22,6 +50,13 @@ public class HouseConstructor2 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             f.PrintRoom(_currentSplitRoom);
+
+            Debug.Log(f.GetRoom(_currentSplitRoom).GetLength() + " : " + f.GetRoom(_currentSplitRoom).GetWidth());
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            f.PrintRoomDir();
 
             Debug.Log(f.GetRoom(_currentSplitRoom).GetLength() + " : " + f.GetRoom(_currentSplitRoom).GetWidth());
         }
@@ -36,22 +71,50 @@ public class HouseConstructor2 : MonoBehaviour
             f.SplitHorizontal(_currentSplitRoom);
         }
 
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            h.BuildHouse();
+        }
+
     }
 }
 
 public class House
 {
     public List<Floor> floors;
-    public House(int length, int width)
+    GameObject[] BLOCK_TYPES;
+    public House(int length, int width, GameObject[] BLOCK_TYPES)
     {
         floors = new List<Floor>();
         var f1 = new Floor(length,width);
         floors.Add(f1);
+        this.BLOCK_TYPES = BLOCK_TYPES;
     }
 
     public void BuildHouse()
     {
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("house");
 
+        for (var i = 0; i < gameObjects.Length; i++)
+            GameObject.Destroy(gameObjects[i]);
+
+        for (int f = 0; f < floors.Count; f++)
+        {
+            for (int l = 0; l < floors[f].blocks.GetLength(0); l++)
+            {
+                for (int w = 0; w < floors[f].blocks.GetLength(1); w++)
+                {
+                    if (floors[f].blocks[l, w].type.Equals("wall"))
+                    {
+                        var go = floors[f].blocks[l, w].ConvertBlock(BLOCK_TYPES);
+                        var obj = GameObject.Instantiate(go);
+                        obj.transform.position = new Vector3(l, f, w);
+                        obj.transform.rotation = Quaternion.Euler(new Vector3(0,0,180f));
+                        obj.tag = "house";
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -92,36 +155,46 @@ public class Floor
             return true;
         }
 
-        var s = "";
-
         for (int l = 0; l < blocks.GetLength(0); l++)
         {
             for (int w = 0; w < blocks.GetLength(1); w++)
             {
-                blocks[l, w].type = "wall";
+                var s = "";
+                
+
                 if (isValid(l - 1, w) == false || blocks[l - 1, w].GetRoomID() != blocks[l, w].GetRoomID())
                 {
                     s += "N";
                 }
-                else if (isValid(l + 1, w) == false || blocks[l + 1, w].GetRoomID() != blocks[l, w].GetRoomID())
+                if (isValid(l + 1,w) == false || blocks[l + 1, w].GetRoomID() != blocks[l, w].GetRoomID())
                 {
                     s += "S";
                 }
-                else if (isValid(l, w - 1) == false || blocks[l, w - 1].GetRoomID() != blocks[l, w].GetRoomID())
-                {
-                    s += "W";
-                }
-                else if (isValid(l, w + 1) == false || blocks[l, w + 1].GetRoomID() != blocks[l, w].GetRoomID())
+                if (isValid(l, w + 1) == false || blocks[l, w + 1].GetRoomID() != blocks[l, w].GetRoomID())
                 {
                     s += "E";
                 }
-                else
+                if (isValid(l, w - 1) == false || blocks[l, w - 1].GetRoomID() != blocks[l, w].GetRoomID())
+                {
+                    s += "W";
+                }
+
+                if (s.Equals(""))
                 {
                     blocks[l, w].type = "empty";
+                    blocks[l, w].direction = "X";
                 }
-                blocks[l, w].direction = s;
+                else
+                {
+                    blocks[l, w].type = "wall";
+                    blocks[l, w].direction = s;
+                }
+
             }
         }
+
+
+
     }
 
     public void SplitVertical(int roomNum)
@@ -290,6 +363,7 @@ public class Floor
             UpdateRoomCorners_BRC(i);
             rooms[i].CalcDimensions();
             UpdateRoomBlocks(i);
+            GenerateBlockTypes();
 
         }
     }
@@ -374,7 +448,29 @@ public class Floor
         }
         Debug.Log(s);
     }
-    
+
+    public void PrintRoomDir()
+    {
+        string s = "";
+        for (int l = 0; l < blocks.GetLength(0); l++)
+        {
+            for (int w = 0; w < blocks.GetLength(1); w++)
+            {
+                if(blocks[l, w].direction.Length == 1)
+                {
+                    s += blocks[l, w].direction + "  ";
+                }
+                else
+                {
+                    s += blocks[l, w].direction + " ";
+                }
+                
+            }
+            s += "\n";
+        }
+        Debug.Log(s);
+    }
+
 }
 
 public class Room
@@ -499,5 +595,30 @@ public class Block
         int[] d = { 0, 0 };
         Debug.LogError("GetBlockLocation() couldn't find location of given block! Defaulting to [0,0].");
         return d;
+    }
+
+    public GameObject ConvertBlock(GameObject[] BLOCK_TYPES)
+    {
+        
+        if(direction=="N")
+                return BLOCK_TYPES[0];
+        if(direction == "S")
+                return BLOCK_TYPES[1];
+        if(direction == "E")
+                return BLOCK_TYPES[2];
+        if(direction == "W")
+                return BLOCK_TYPES[3];
+
+        if(direction == "NE")
+                return BLOCK_TYPES[4];
+        if(direction == "NW")
+                return BLOCK_TYPES[5];
+        if(direction == "SE")
+                return BLOCK_TYPES[6];
+        if(direction == "SW")
+                return BLOCK_TYPES[7];
+
+
+        return null;
     }
 }
