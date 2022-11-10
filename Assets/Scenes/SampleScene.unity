@@ -435,8 +435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed874483b5878d47ad553e5456bbb98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 12
-  length: 12
 --- !u!4 &1377169083
 Transform:
   m_ObjectHideFlags: 0
@@ -464,6 +462,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d505e91fad13fda4ea9d579e1b92801a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  length: 12
-  width: 15
+  length: 25
+  width: 20
   _currentSplitRoom: 0
+  minRoomDimension: 4
+  roomSplitRepetitions: 15
+  variation: 5
+  NBlock: {fileID: 919132149155446097, guid: 3f7c09a23ba6a5244a38032ef59b7094, type: 3}
+  SBlock: {fileID: 919132149155446097, guid: d5589e2438a73434c8c5abef44713c02, type: 3}
+  EBlock: {fileID: 919132149155446097, guid: 901e72d673eb0a640b86f8f61effc29e, type: 3}
+  WBlock: {fileID: 919132149155446097, guid: ab92ac5cd848faf40a66217a2cc5b495, type: 3}
+  NEBlock: {fileID: 919132149155446097, guid: d3f41c82137c64b4e8f706d9d9c0ce01, type: 3}
+  NWBlock: {fileID: 919132149155446097, guid: 6cca40af2a024bd438aafb69c84e0d17, type: 3}
+  SEBlock: {fileID: 919132149155446097, guid: 6a826daa24e2b7c4dacca79b950caea5, type: 3}
+  SWBlock: {fileID: 919132149155446097, guid: 69ed138b682723449abcac8525dcc6c3, type: 3}
