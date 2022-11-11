@@ -123,6 +123,10 @@ public class House
     public void BuildHouse()
     {
         DestroyHouse();
+        for (int i = 0; i<floors.Count; i++)
+        {
+            floors[0].Final();
+        }
 
         for (int f = 0; f < floors.Count; f++)
         {
@@ -134,6 +138,7 @@ public class House
                     {
                         
                         var go = floors[f].blocks[l, w].ConvertBlock(BLOCK_TYPES);
+
                         var obj = GameObject.Instantiate(go);
                         obj.transform.position = new Vector3(l, f, w);
                         obj.transform.rotation = Quaternion.Euler(new Vector3(-90,90,0));
@@ -185,15 +190,18 @@ public class Floor
         rooms.Add(r);
     }
 
+    public bool isValid(int l, int w)
+    {
+        if (l < 0 || w < 0 || l > blocks.GetLength(0) - 1 || w > blocks.GetLength(1) - 1)
+        {
+            return false;
+        }
+        return true;
+    }
+
     public void GenerateBlockTypes()
     {
-        bool isValid(int l, int w){
-            if(l < 0 || w < 0 || l>blocks.GetLength(0)-1 || w > blocks.GetLength(1) - 1)
-            {
-                return false;
-            }
-            return true;
-        }
+        
 
         for (int l = 0; l < blocks.GetLength(0); l++)
         {
@@ -307,13 +315,13 @@ public class Floor
 
         if (r1.GetLength() < minLength || r1.GetWidth() < minLength)
         {
-            Debug.Log("Room is too small! Cancelling split.");
+            //Debug.Log("Room is too small! Cancelling split.");
             return;
         }
 
         if (r2.GetLength() < minLength || r2.GetWidth() < minLength)
         {
-            Debug.Log("Room is too small! Cancelling split.");
+            //Debug.Log("Room is too small! Cancelling split.");
             return;
         }
 
@@ -390,13 +398,13 @@ public class Floor
 
         if (r1.GetLength() < minLength || r1.GetWidth() < minLength)
         {
-            Debug.Log("Room is too small! Cancelling split.");
+            //Debug.Log("Room is too small! Cancelling split.");
             return;
         }
 
         if (r2.GetLength() < minLength || r2.GetWidth() < minLength)
         {
-            Debug.Log("Room is too small! Cancelling split.");
+            //Debug.Log("Room is too small! Cancelling split.");
             return;
         }
 
@@ -548,7 +556,92 @@ public class Floor
         Debug.Log(s);
     }
 
+    public void Final()
+    {
+        AddDoors();
+    }
+
+    public void AddDoors()
+    {
+        for(int i = 0; i < rooms.Count; i++)
+        {
+            var room = rooms[i];
+            for(int b = 0; b < room.blocks.Count; b++)
+            {
+                if (room.blocks[b].type == "wall" && room.blocks[b].direction.Length == 1)
+                {
+                    var block = room.blocks[b];
+                    int[] location = block.GetBlockLocation(this);
+                    
+
+                    if (block.direction == "N")
+                    {
+                        int[] newLoc = new int[2];
+                        newLoc[0] = location[0] - 1;
+                        newLoc[1] = location[1];
+                        if (isValid(newLoc[0],newLoc[1]))
+                        {
+                            if(blocks[newLoc[0],newLoc[1]].direction.Length == 1 && !blocks[newLoc[0], newLoc[1]].direction.Equals("X"))
+                            {
+                                block.type = "door";
+                                blocks[newLoc[0], newLoc[1]].type = "door";
+                                break;
+                            }
+                        }
+                    }
+                    else if (block.direction == "E")
+                    {
+                        int[] newLoc = new int[2];
+                        newLoc[0] = location[0];
+                        newLoc[1] = location[1] + 1;
+                        if (isValid(newLoc[0], newLoc[1]))
+                        {
+                            if (blocks[newLoc[0], newLoc[1]].direction.Length == 1 && !blocks[newLoc[0], newLoc[1]].direction.Equals("X"))
+                            {
+                                block.type = "door";
+                                blocks[newLoc[0], newLoc[1]].type = "door";
+                                break;
+                            }
+                        }
+                    }
+                    else if (block.direction == "S")
+                    {
+                        int[] newLoc = new int[2];
+                        newLoc[0] = location[0] + 1;
+                        newLoc[1] = location[1];
+                        if (isValid(newLoc[0], newLoc[1]))
+                        {
+                            if (blocks[newLoc[0], newLoc[1]].direction.Length == 1 && !blocks[newLoc[0], newLoc[1]].direction.Equals("X"))
+                            {
+                                block.type = "door";
+                                blocks[newLoc[0], newLoc[1]].type = "door";
+                                break;
+                            }
+                        }
+                    }
+                    else if (block.direction == "W")
+                    {
+                        int[] newLoc = new int[2];
+                        newLoc[0] = location[0];
+                        newLoc[1] = location[1] - 1;
+                        if (isValid(newLoc[0], newLoc[1]))
+                        {
+                            if (blocks[newLoc[0], newLoc[1]].direction.Length == 1 && !blocks[newLoc[0], newLoc[1]].direction.Equals("X"))
+                            {
+                                block.type = "door";
+                                blocks[newLoc[0], newLoc[1]].type = "door";
+                                break;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
 }
+
+
 
 public class Room
 {
@@ -620,7 +713,7 @@ public class Room
             string p = "";
             p += s;
             p += " Room #" + id + " has MORE blocks than specified by corners! \n(" + blocks.Count + " blocks : " + (length * width) + " l*w)";
-            Debug.LogError(p);
+            //Debug.LogError(p);
         }
 
         if (blocks.Count < GetWidth() * GetLength())
@@ -628,7 +721,7 @@ public class Room
             string p = "";
             p += s;
             p += " Room #" + id + " has LESS blocks than specified by corners! \n(" + blocks.Count + " blocks : " + (length * width) + " l*w)";
-            Debug.LogError(p);
+            //Debug.LogError(p);
         }
     }
 }
@@ -681,21 +774,25 @@ public class Block
         
         if(direction=="N")
                 return BLOCK_TYPES[0];
-        if(direction == "S")
+        else if(direction == "S")
                 return BLOCK_TYPES[1];
-        if(direction == "E")
+        else if(direction == "E")
                 return BLOCK_TYPES[2];
-        if(direction == "W")
+        else if(direction == "W")
                 return BLOCK_TYPES[3];
 
-        if(direction == "NE")
+        else if(direction == "NE")
                 return BLOCK_TYPES[4];
-        if(direction == "NW")
+        else if(direction == "NW")
                 return BLOCK_TYPES[5];
-        if(direction == "SE")
+        else if(direction == "SE")
                 return BLOCK_TYPES[6];
-        if(direction == "SW")
+        else if(direction == "SW")
                 return BLOCK_TYPES[7];
+        else
+        {
+            Debug.LogError("Block type not found! | Type: " + type +  ", Direction: " + direction);
+        }
 
 
         return null;
