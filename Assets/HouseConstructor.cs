@@ -25,7 +25,11 @@ public class HouseConstructor : MonoBehaviour
     public GameObject SEBlock;
     public GameObject SWBlock;
 
-    public static GameObject[] BLOCK_TYPES;
+    public GameObject FloorBlock;
+
+    public GameObject[] BLOCK_TYPES;
+
+    public float scale = 1f;
 
 
 
@@ -33,7 +37,7 @@ public class HouseConstructor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BLOCK_TYPES = new GameObject[8];
+        BLOCK_TYPES = new GameObject[9];
 
         BLOCK_TYPES[0] = NBlock;
         BLOCK_TYPES[1] = SBlock;
@@ -43,11 +47,10 @@ public class HouseConstructor : MonoBehaviour
         BLOCK_TYPES[5] = NWBlock;
         BLOCK_TYPES[6] = SEBlock;
         BLOCK_TYPES[7] = SWBlock;
+        BLOCK_TYPES[8] = FloorBlock;
 
-        h = new House(length,width, BLOCK_TYPES);
+        h = new House(length,width, BLOCK_TYPES, scale);
         f = h.floors[0];
-        
-
     }
 
     // Update is called once per frame
@@ -62,7 +65,7 @@ public class HouseConstructor : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.T))
         {
-            f.PrintRoomDir();
+            //f.PrintRoomDir();
 
             Debug.Log(f.GetRoom(_currentSplitRoom).GetLength() + " : " + f.GetRoom(_currentSplitRoom).GetWidth());
         }
@@ -84,21 +87,24 @@ public class HouseConstructor : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
-            h = new House(length,width,BLOCK_TYPES);
+            h = new House(length,width,BLOCK_TYPES, scale);
             for (int i = 0; i < roomSplitRepetitions; i++)
             {
-                var rand = Random.Range(0, 10f);
-                if (rand < 5)
+                for (int r = 0; r < h.floors[0].rooms.Count; r++)
                 {
-                    var room = Random.Range(0, h.floors[0].rooms.Count);
-                    var id = h.floors[0].GetRoomID(room);
-                    h.floors[0].SplitHorizontal(id,minRoomDimension,variation);
-                }
-                else
-                {
-                    var room = Random.Range(0, h.floors[0].rooms.Count);
-                    var id = h.floors[0].GetRoomID(room);
-                    h.floors[0].SplitVertical(id, minRoomDimension,variation);
+                    var rand = Random.Range(0, 3);
+                    if (rand == 1)
+                    {
+                        var room = Random.Range(0, h.floors[0].rooms.Count);
+                        var id = h.floors[0].GetRoomID(room);
+                        h.floors[0].SplitHorizontal(id, minRoomDimension, variation);
+                    }
+                    else
+                    {
+                        var room = Random.Range(0, h.floors[0].rooms.Count);
+                        var id = h.floors[0].GetRoomID(room);
+                        h.floors[0].SplitVertical(id, minRoomDimension, variation);
+                    }
                 }
                 
             }
@@ -112,12 +118,14 @@ public class House
 {
     public List<Floor> floors;
     GameObject[] BLOCK_TYPES;
-    public House(int length, int width, GameObject[] BLOCK_TYPES)
+    float scale;
+    public House(int length, int width, GameObject[] BLOCK_TYPES, float scale)
     {
         floors = new List<Floor>();
         var f1 = new Floor(length,width);
         floors.Add(f1);
         this.BLOCK_TYPES = BLOCK_TYPES;
+        this.scale = scale;
     }
 
     public void BuildHouse()
@@ -134,20 +142,35 @@ public class House
             {
                 for (int w = 0; w < floors[f].blocks.GetLength(1); w++)
                 {
-                    if (floors[f].blocks[l, w].type.Equals("wall") || floors[f].blocks[l, w].type.Equals("door"))
+                    if (!floors[f].blocks[l, w].type.Equals("null"))
                     {
-                        
-                        var go = floors[f].blocks[l, w].ConvertBlock(BLOCK_TYPES);
+                        if (!floors[f].blocks[l, w].type.Equals("empty")) {
+                            var go = floors[f].blocks[l, w].ConvertBlock(BLOCK_TYPES);
+                            var obj = GameObject.Instantiate(go);
+                            obj.transform.position = new Vector3(l* scale, f* scale, w* scale);
+                            obj.transform.rotation = Quaternion.Euler(new Vector3(-90, 90, 0));
+                            obj.transform.localScale = new Vector3(scale, scale, scale);
+                            obj.tag = "house";
 
-                        var obj = GameObject.Instantiate(go);
-                        obj.transform.position = new Vector3(l, f, w);
-                        obj.transform.rotation = Quaternion.Euler(new Vector3(-90,90,0));
-                        obj.tag = "house";
-                        obj.GetComponent<MeshRenderer>().materials[0].color = Color.red;
-                        if (floors[f].blocks[l, w].type.Equals("door"))
-                        {
-                            obj.GetComponent<MeshRenderer>().materials[0].color = Color.white;
+                            if (floors[f].blocks[l, w].type.Equals("door"))
+                            {
+                                obj.GetComponent<MeshRenderer>().materials[0].color = Color.white;
+                            }
+                            else if (floors[f].blocks[l, w].type.Equals("wall"))
+                            {
+                                obj.GetComponent<MeshRenderer>().materials[0].color = floors[f].GetRoom(floors[f].blocks[l, w].GetRoomID()).wallColor;
+                            }
                         }
+
+                        var floor = GameObject.Instantiate(BLOCK_TYPES[8]);
+                        floor.transform.position = new Vector3(l *scale , f * scale, w * scale);
+                        floor.transform.rotation = Quaternion.Euler(new Vector3(-90, 90, 0));
+                        floor.transform.localScale = new Vector3(scale, scale, scale);
+                        floor.tag = "house";
+
+
+                        floor.GetComponent<MeshRenderer>().materials[0].color = floors[f].GetRoom(floors[f].blocks[l, w].GetRoomID()).floorColor;
+                        
                     }
                 }
             }
@@ -238,15 +261,12 @@ public class Floor
                     blocks[l, w].direction = s;
                 }
 
-                if (l == 0 || w == 0 || l==blocks.GetLength(0)|| w==blocks.GetLength(0))
+                if (l == 0 || w == 0 || l==blocks.GetLength(0)-1|| w==blocks.GetLength(0)-1)
                 {
                     blocks[l, w].isEdge = true;
                 }
             }
         }
-
-
-
     }
 
     public void SplitVertical(int roomNum, int minLength, int maxVar)
@@ -315,13 +335,13 @@ public class Floor
 
         if (r1.GetLength() < minLength || r1.GetWidth() < minLength)
         {
-            //Debug.Log("Room is too small! Cancelling split.");
+            Debug.Log("Room is too small! Cancelling split.");
             return;
         }
 
         if (r2.GetLength() < minLength || r2.GetWidth() < minLength)
         {
-            //Debug.Log("Room is too small! Cancelling split.");
+            Debug.Log("Room is too small! Cancelling split.");
             return;
         }
 
@@ -398,13 +418,13 @@ public class Floor
 
         if (r1.GetLength() < minLength || r1.GetWidth() < minLength)
         {
-            //Debug.Log("Room is too small! Cancelling split.");
+            Debug.Log("Room is too small! Cancelling split.");
             return;
         }
 
         if (r2.GetLength() < minLength || r2.GetWidth() < minLength)
         {
-            //Debug.Log("Room is too small! Cancelling split.");
+            Debug.Log("Room is too small! Cancelling split.");
             return;
         }
 
@@ -449,7 +469,6 @@ public class Floor
             rooms[i].CalcDimensions();
             UpdateRoomBlocks(i);
             GenerateBlockTypes();
-
         }
     }
 
@@ -559,6 +578,7 @@ public class Floor
     public void Final()
     {
         AddDoors();
+        RemoveEdgeRoom();
     }
 
     public void AddDoors()
@@ -568,7 +588,7 @@ public class Floor
             var room = rooms[i];
             for(int b = 0; b < room.blocks.Count; b++)
             {
-                if (room.blocks[b].type == "wall" && room.blocks[b].direction.Length == 1)
+                if (room.blocks[b].type == "wall" && room.blocks[b].isEdge == false && room.blocks[b].direction.Length == 1)
                 {
                     var block = room.blocks[b];
                     int[] location = block.GetBlockLocation(this);
@@ -639,6 +659,71 @@ public class Floor
             }
         }
     }
+    public void RemoveEdgeRoom()
+    {
+        List<Room> rms = new List<Room>(rooms);
+
+        for (int i = 0; i < rms.Count; i++)
+        {
+            var temp = rms[i];
+            int randomIndex = Random.Range(i, rms.Count);
+            rms[i] = rms[randomIndex];
+            rms[randomIndex] = temp;
+        }
+
+        for (int r = 0; r < rms.Count; r++)
+        {
+            var room = rms[r];
+
+            string dir1 = "";
+            string dir2 = "";
+
+            Debug.Log(room.GetLength() + ", " + blocks.GetLength(0) + " : " + room.GetWidth() + ", " + blocks.GetLength(1));
+            if (room.GetLength() == blocks.GetLength(0) || room.GetWidth() == blocks.GetLength(1))
+            {
+                Debug.Log("Skipping room removal (full length room)");
+                continue;
+            }
+
+                for (int b = 0; b<room.blocks.Count; b++)
+            {
+                var block = room.blocks[b];
+
+                if (block.isEdge && block.direction.Length==1)
+                {
+                    dir1 = block.direction;
+                    break;
+                }
+            }
+
+            if (!dir1.Equals(""))
+            {
+                for (int b = 0; b < room.blocks.Count; b++)
+                {
+                    var block = room.blocks[b];
+
+                    if (block.isEdge && block.direction.Length == 1 && !block.direction.Equals(dir1) && !Block.IsOppositeDirectionWall(dir1,block))
+                    {
+                        dir2 = block.direction;
+                        break;
+                    }
+                }
+                if (!dir2.Equals(""))
+                {
+                    Debug.Log(dir1 + " : " + dir2);
+                    for (int b = 0; b < room.blocks.Count; b++)
+                    {
+                        var block = room.blocks[b];
+
+                        block.direction = "X";
+                        block.type = "null";
+                    }
+                    return;
+                }
+            }
+
+        }
+    }
 }
 
 
@@ -652,6 +737,9 @@ public class Room
     public Block bottomRightCorner;
     public Floor h;
 
+    public Color wallColor;
+    public Color floorColor;
+
     int length;
     int width;
 
@@ -660,6 +748,9 @@ public class Room
         id = ROOMS;
         ROOMS++;
         this.h = house;
+
+        wallColor = Random.ColorHSV();
+        floorColor = Random.ColorHSV();
     }
 
     public void SetBlocks(List<Block> b, Block tLC, Block bRC)
@@ -789,6 +880,10 @@ public class Block
                 return BLOCK_TYPES[6];
         else if(direction == "SW")
                 return BLOCK_TYPES[7];
+        else if(direction == "X" && type == "empty")
+        {
+            return BLOCK_TYPES[8];
+        }
         else
         {
             Debug.LogError("Block type not found! | Type: " + type +  ", Direction: " + direction);
@@ -796,5 +891,47 @@ public class Block
 
 
         return null;
+    }
+
+    public bool IsOppositeDirectionWall(Block b)
+    {
+        if(direction == "N")
+        {
+            return b.direction.Equals("S");
+        }
+        else if (direction == "E")
+        {
+            return b.direction.Equals("W");
+        }
+        else if (direction == "S")
+        {
+            return b.direction.Equals("N");
+        }
+        else if (direction == "W")
+        {
+            return b.direction.Equals("W");
+        }
+        return false;
+    }
+
+    public static bool IsOppositeDirectionWall(string direction, Block b)
+    {
+        if (direction == "N")
+        {
+            return b.direction.Equals("S");
+        }
+        else if (direction == "E")
+        {
+            return b.direction.Equals("W");
+        }
+        else if (direction == "S")
+        {
+            return b.direction.Equals("N");
+        }
+        else if (direction == "W")
+        {
+            return b.direction.Equals("E");
+        }
+        return false;
     }
 }
