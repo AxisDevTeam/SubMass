@@ -303,7 +303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1377169083
 Transform:
   m_ObjectHideFlags: 0
@@ -348,7 +348,7 @@ MonoBehaviour:
   FloorBlock: {fileID: 919132149155446097, guid: b81ab42694b63e44c9cc53e8f23c9e91,
     type: 3}
   BLOCK_TYPES: []
-  scale: 1
+  scale: 5
 --- !u!1 &1817706852
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,17 +704,17 @@ PrefabInstance:
     - target: {fileID: 9050450913809106624, guid: 1974404d6e72f4e43ad04599bad4c148,
         type: 3}
       propertyPath: headBobSpeed
-      value: 10
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 9050450913809106624, guid: 1974404d6e72f4e43ad04599bad4c148,
         type: 3}
       propertyPath: verticalHeadBobAmplitude
-      value: 0.25
+      value: 0.025
       objectReference: {fileID: 0}
     - target: {fileID: 9050450913809106624, guid: 1974404d6e72f4e43ad04599bad4c148,
         type: 3}
       propertyPath: horizontalHeadBobAmplitude
-      value: 0.25
+      value: 0.025
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1974404d6e72f4e43ad04599bad4c148, type: 3}
