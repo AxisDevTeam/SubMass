@@ -15,19 +15,14 @@ public class HouseConstructor : MonoBehaviour
 
     public int variation;
 
-    public GameObject NBlock;
-    public GameObject SBlock;
-    public GameObject EBlock;
-    public GameObject WBlock;
-
-    public GameObject NEBlock;
-    public GameObject NWBlock;
-    public GameObject SEBlock;
-    public GameObject SWBlock;
-
+    public GameObject WallBlock;
+    public GameObject CornerBlock;
     public GameObject FloorBlock;
+    public GameObject DoorBlock;
 
-    public GameObject[] BLOCK_TYPES;
+    //public GameObject[] BLOCK_TYPES;
+
+    public Dictionary<string,GameObject> BLOCK_TYPES;
 
     public float scale = 1f;
 
@@ -37,17 +32,14 @@ public class HouseConstructor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BLOCK_TYPES = new GameObject[9];
+        BLOCK_TYPES = new Dictionary<string, GameObject>();
 
-        BLOCK_TYPES[0] = NBlock;
-        BLOCK_TYPES[1] = SBlock;
-        BLOCK_TYPES[2] = EBlock;
-        BLOCK_TYPES[3] = WBlock;
-        BLOCK_TYPES[4] = NEBlock;
-        BLOCK_TYPES[5] = NWBlock;
-        BLOCK_TYPES[6] = SEBlock;
-        BLOCK_TYPES[7] = SWBlock;
-        BLOCK_TYPES[8] = FloorBlock;
+        BLOCK_TYPES.Add("wall", WallBlock);
+        BLOCK_TYPES.Add("corner", CornerBlock);
+        BLOCK_TYPES.Add("floor", FloorBlock);
+        BLOCK_TYPES.Add("door", DoorBlock);
+
+        print(BLOCK_TYPES["wall"]);
 
         h = new House(length,width, BLOCK_TYPES, scale);
         f = h.floors[0];
@@ -144,9 +136,9 @@ public class HouseConstructor : MonoBehaviour
 public class House
 {
     public List<Floor> floors;
-    GameObject[] BLOCK_TYPES;
+    Dictionary<string, GameObject> BLOCK_TYPES;
     float scale;
-    public House(int length, int width, GameObject[] BLOCK_TYPES, float scale)
+    public House(int length, int width, Dictionary<string,GameObject> BLOCK_TYPES, float scale)
     {
         floors = new List<Floor>();
         var f1 = new Floor(length,width);
@@ -173,9 +165,25 @@ public class House
                     {
                         if (!floors[f].blocks[l, w].type.Equals("empty")) {
                             var go = floors[f].blocks[l, w].ConvertBlock(BLOCK_TYPES);
+
+
+                            var rot = 0;
+                            if(floors[f].blocks[l, w].direction == "S" || floors[f].blocks[l, w].direction == "SW")
+                            {
+                                rot = 180;
+                            }
+                            else if (floors[f].blocks[l, w].direction == "E" || floors[f].blocks[l, w].direction == "SE")
+                            {
+                                rot = 90;
+                            }
+                            else if (floors[f].blocks[l, w].direction == "W" || floors[f].blocks[l, w].direction == "NW")
+                            {
+                                rot = 270;
+                            }
+
                             var obj = GameObject.Instantiate(go);
                             obj.transform.position = new Vector3(l* scale, f* scale, w* scale);
-                            obj.transform.rotation = Quaternion.Euler(new Vector3(-90, 90, 0));
+                            obj.transform.rotation = Quaternion.Euler(new Vector3(-90, 90, 0) + new Vector3(0, rot, 0));
                             obj.transform.localScale = new Vector3(scale, scale, scale);
                             obj.tag = "house";
 
@@ -189,7 +197,7 @@ public class House
                             }
                         }
 
-                        var floor = GameObject.Instantiate(BLOCK_TYPES[8]);
+                        var floor = GameObject.Instantiate(BLOCK_TYPES["floor"]);
                         floor.transform.position = new Vector3(l *scale , f * scale, w * scale);
                         floor.transform.rotation = Quaternion.Euler(new Vector3(-90, 90, 0));
                         floor.transform.localScale = new Vector3(scale, scale, scale);
@@ -604,11 +612,11 @@ public class Floor
 
     public void Final()
     {
-        AddDoors();
         RemoveEdgeRoom();
+        AddDoors();
     }
 
-    public void AddDoors()
+    public void AddDoors1()
     {
         for(int i = 0; i < rooms.Count; i++)
         {
@@ -686,6 +694,133 @@ public class Floor
             }
         }
     }
+
+    public void AddDoors()
+    {
+        for (int l = 0; l < blocks.GetLength(0); l++)
+        {
+            for (int w = 0; w < blocks.GetLength(1); w++)
+            {
+                var block = blocks[l, w];
+                if (block.type == "wall" && block.direction.Length == 1 && block.isEdge == false)
+                {
+                    if (block.direction == "N")
+                    {
+                        var dirBlock = blocks[l - 1, w];
+                        if (dirBlock.direction == "X")
+                        {
+                            continue;
+                        }
+
+                        if (dirBlock.direction.Length != 1)
+                        {
+                            continue;
+                        }
+                    }
+                    else if (block.direction == "S")
+                    {
+                        var dirBlock = blocks[l + 1, w];
+                        if (dirBlock.direction == "X")
+                        {
+                            continue;
+                        }
+
+                        if (dirBlock.direction.Length != 1)
+                        {
+                            continue;
+                        }
+                    }
+                    else if (block.direction == "E")
+                    {
+                        var dirBlock = blocks[l, w + 1];
+                        if (dirBlock.direction == "X")
+                        {
+                            continue;
+                        }
+
+                        if (dirBlock.direction.Length != 1)
+                        {
+                            continue;
+                        }
+                    }
+                    else if (block.direction == "W")
+                    {
+                        var dirBlock = blocks[l, w - 1];
+                        if (dirBlock.direction == "X")
+                        {
+                            continue;
+                        }
+
+                        if (dirBlock.direction.Length != 1)
+                        {
+                            continue;
+                        }
+                    }
+
+                    block.type = "door";
+
+                }
+            }
+        }
+
+
+        for (int l = 0; l < blocks.GetLength(0); l++)
+        {
+            for (int w = 0; w < blocks.GetLength(1); w++)
+            {
+                var block = blocks[l, w];
+
+                if (block.type == "door")
+                { 
+                    if(block.direction == "N")
+                    {
+                        //blocks[l - 1, w ].type = "empty";
+                        var num = 1;
+                        while (blocks[l, w - num].type == "door" && isValid(l, w - num))
+                        {
+                            blocks[l, w - num].type = "wall";
+                            blocks[l - 1, w - num].type = "wall";
+                            num += 1;
+                        }
+
+                        num = -1;
+
+                        while (blocks[l, w - num].type == "door" && isValid(l, w - num))
+                        {
+                            blocks[l, w - num].type = "wall";
+                            blocks[l - 1, w - num].type = "wall";
+                            num -= 1;
+                        }
+                    }
+
+                    if (block.direction == "E")
+                    {
+                        //blocks[l, w + 1].type = "empty";
+                        var num = 1;
+                        while (blocks[l - num, w].type == "door" && isValid(l - num, w))
+                        {
+                            blocks[l - num, w].type = "wall";
+                            blocks[l - num, w + 1].type = "wall";
+                            num += 1;
+                        }
+
+                        num = -1;
+
+                        while (blocks[l - num, w].type == "door" && isValid(l - num, w))
+                        {
+                            blocks[l - num, w].type = "wall";
+                            blocks[l - num, w + 1].type = "wall";
+                            num -= 1;
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+    }
+
     public void RemoveEdgeRoom()
     {
         List<Room> rms = new List<Room>(rooms);
@@ -702,17 +837,22 @@ public class Floor
         {
             var room = rms[r];
 
+            if ((float)room.blocks.Count / (blocks.GetLength(0) * blocks.GetLength(1)) > 0.35f){
+                Debug.Log("Skipping room removal (too big)");
+                continue;
+            }
+
             string dir1 = "";
             string dir2 = "";
 
-            Debug.Log(room.GetLength() + ", " + blocks.GetLength(0) + " : " + room.GetWidth() + ", " + blocks.GetLength(1));
+            //Debug.Log(room.GetLength() + ", " + blocks.GetLength(0) + " : " + room.GetWidth() + ", " + blocks.GetLength(1));
             if (room.GetLength() == blocks.GetLength(0) || room.GetWidth() == blocks.GetLength(1))
             {
                 Debug.Log("Skipping room removal (full length room)");
                 continue;
             }
 
-                for (int b = 0; b<room.blocks.Count; b++)
+            for (int b = 0; b<room.blocks.Count; b++)
             {
                 var block = room.blocks[b];
 
@@ -737,7 +877,7 @@ public class Floor
                 }
                 if (!dir2.Equals(""))
                 {
-                    Debug.Log(dir1 + " : " + dir2);
+                    //Debug.Log(dir1 + " : " + dir2);
                     for (int b = 0; b < room.blocks.Count; b++)
                     {
                         var block = room.blocks[b];
@@ -887,35 +1027,17 @@ public class Block
         return d;
     }
 
-    public GameObject ConvertBlock(GameObject[] BLOCK_TYPES)
+    public GameObject ConvertBlock(Dictionary<string, GameObject> BLOCK_TYPES)
     {
-        
-        if(direction=="N")
-                return BLOCK_TYPES[0];
-        else if(direction == "S")
-                return BLOCK_TYPES[1];
-        else if(direction == "E")
-                return BLOCK_TYPES[2];
-        else if(direction == "W")
-                return BLOCK_TYPES[3];
 
-        else if(direction == "NE")
-                return BLOCK_TYPES[4];
-        else if(direction == "NW")
-                return BLOCK_TYPES[5];
-        else if(direction == "SE")
-                return BLOCK_TYPES[6];
-        else if(direction == "SW")
-                return BLOCK_TYPES[7];
-        else if(direction == "X" && type == "empty")
-        {
-            return BLOCK_TYPES[8];
-        }
+        if (direction.Length == 1 && direction != "X")
+            return BLOCK_TYPES["wall"];
+        else if (direction.Length == 2)
+            return BLOCK_TYPES["corner"];
+        else if (direction == "X" && type == "empty")
+            return BLOCK_TYPES["floor"];
         else
-        {
-            Debug.LogError("Block type not found! | Type: " + type +  ", Direction: " + direction);
-        }
-
+            Debug.LogError("Block type not found! | Type: " + type + ", Direction: " + direction);
 
         return null;
     }
