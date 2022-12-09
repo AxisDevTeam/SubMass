@@ -297,6 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377169083}
   - component: {fileID: 1377169084}
+  - component: {fileID: 1377169085}
   m_Layer: 0
   m_Name: House Builder
   m_TagString: Untagged
@@ -349,6 +350,19 @@ MonoBehaviour:
     type: 3}
   BLOCK_TYPES: []
   scale: 5
+--- !u!114 &1377169085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377169081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba0d36272150674f89a45b2b108ba4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRoomCount: 6
 --- !u!1 &1817706852
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136252840}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.005, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []

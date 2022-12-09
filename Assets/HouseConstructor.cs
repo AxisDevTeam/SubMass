@@ -53,6 +53,33 @@ public class HouseConstructor : MonoBehaviour
         f = h.floors[0];
     }
 
+    public House HouseGen()
+    {
+        h = new House(length, width, BLOCK_TYPES, scale);
+        for (int i = 0; i < roomSplitRepetitions; i++)
+        {
+            for (int r = 0; r < h.floors[0].rooms.Count; r++)
+            {
+                var rand = Random.Range(0, 3);
+                if (rand == 1)
+                {
+                    var room = Random.Range(0, h.floors[0].rooms.Count);
+                    var id = h.floors[0].GetRoomID(room);
+                    h.floors[0].SplitHorizontal(id, minRoomDimension, variation);
+                }
+                else
+                {
+                    var room = Random.Range(0, h.floors[0].rooms.Count);
+                    var id = h.floors[0].GetRoomID(room);
+                    h.floors[0].SplitVertical(id, minRoomDimension, variation);
+                }
+            }
+
+        }
+        h.BuildHouse();
+        return h;
+    }
+
     // Update is called once per frame
     void Update()
     {
