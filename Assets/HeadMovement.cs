@@ -8,6 +8,10 @@ public class HeadMovement : MonoBehaviour
     public float horizontalHeadBobAmplitude = 1f;
     public float headBobSpeed = 1f;
 
+    public float headBobMag = 0;
+
+    public float headBobCorrectSpeed = 0.9f;
+
     float headBobTime;
 
     Vector3 _cameraStartPos;
@@ -23,7 +27,8 @@ public class HeadMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        headBobTime += Time.deltaTime * fpc.GetSpeed() / fpc.MoveSpeed;
+        headBobMag = Mathf.Lerp(headBobMag, fpc.GetSpeed() / fpc.MoveSpeed, headBobCorrectSpeed);
+        headBobTime += Time.deltaTime;
         ApplyMovement(CalculateBob());
     }
 
@@ -37,7 +42,8 @@ public class HeadMovement : MonoBehaviour
             head += Vector3.right * Mathf.Cos(headBobTime / headBobSpeed) * horizontalHeadBobAmplitude;
             head += Vector3.up * Mathf.Sin(2 * headBobTime / headBobSpeed) * verticalHeadBobAmplitude;
         }
-        return head * fpc.GetSpeed() / fpc.MoveSpeed;
+
+        return head * headBobMag;
     }
 
     public void ApplyMovement(Vector3 movement)

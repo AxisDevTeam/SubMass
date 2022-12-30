@@ -338,17 +338,14 @@ MonoBehaviour:
   minRoomDimension: 3
   roomSplitRepetitions: 15
   variation: 5
-  NBlock: {fileID: 919132149155446097, guid: 0ff5d6da358fc46de98d2b9182c0666d, type: 3}
-  SBlock: {fileID: 919132149155446097, guid: dd7e43da00c0a45dea4de5e5ef5a8fe1, type: 3}
-  EBlock: {fileID: 919132149155446097, guid: 340865a8a44be42e5a247c670b97df68, type: 3}
-  WBlock: {fileID: 919132149155446097, guid: d756368a6f9dc47b4a29ffe4edcb323a, type: 3}
-  NEBlock: {fileID: 919132149155446097, guid: a112e3aa72b3547d4a62b7cd0d90059f, type: 3}
-  NWBlock: {fileID: 919132149155446097, guid: 25da8537f615c4f48987971b30069b4b, type: 3}
-  SEBlock: {fileID: 919132149155446097, guid: 4df04a638b6fe46d6852383bb92956ad, type: 3}
-  SWBlock: {fileID: 919132149155446097, guid: 530dbb8c212384b3dbdce936cf0da0d7, type: 3}
+  WallBlock: {fileID: 919132149155446097, guid: 0ff5d6da358fc46de98d2b9182c0666d,
+    type: 3}
+  CornerBlock: {fileID: 919132149155446097, guid: a112e3aa72b3547d4a62b7cd0d90059f,
+    type: 3}
   FloorBlock: {fileID: 919132149155446097, guid: b81ab42694b63e44c9cc53e8f23c9e91,
     type: 3}
-  BLOCK_TYPES: []
+  DoorBlock: {fileID: 919132149155446097, guid: 0ff5d6da358fc46de98d2b9182c0666d,
+    type: 3}
   scale: 5
 --- !u!114 &1377169085
 MonoBehaviour:
@@ -440,6 +437,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -653,6 +651,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6273711217212134376, guid: 1974404d6e72f4e43ad04599bad4c148,
@@ -722,6 +721,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050450913809106624, guid: 1974404d6e72f4e43ad04599bad4c148,
         type: 3}
+      propertyPath: headBobCorrectSpeed
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050450913809106624, guid: 1974404d6e72f4e43ad04599bad4c148,
+        type: 3}
       propertyPath: verticalHeadBobAmplitude
       value: 0.025
       objectReference: {fileID: 0}
@@ -730,5 +734,7 @@ PrefabInstance:
       propertyPath: horizontalHeadBobAmplitude
       value: 0.025
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5932957212495349864, guid: 1974404d6e72f4e43ad04599bad4c148, type: 3}
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 1974404d6e72f4e43ad04599bad4c148, type: 3}

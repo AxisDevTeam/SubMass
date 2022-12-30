@@ -31,6 +31,14 @@ public class HouseSetup : MonoBehaviour
             house = GetComponent<HouseConstructor>().HouseGen();
         }
 
+        foreach (var floor in house.floors)
+        {
+            while (floor.rooms.Count != targetRoomCount + 1)
+            {
+                house = GetComponent<HouseConstructor>().HouseGen();
+            }
+        }
+
         return;
     }
 }

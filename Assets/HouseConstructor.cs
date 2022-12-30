@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class HouseConstructor : MonoBehaviour
@@ -87,16 +88,6 @@ public class HouseConstructor : MonoBehaviour
             //f.PrintRoomDir();
 
             Debug.Log(f.GetRoom(_currentSplitRoom).GetLength() + " : " + f.GetRoom(_currentSplitRoom).GetWidth());
-        }
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            f.SplitVertical(_currentSplitRoom, minRoomDimension, variation);
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            f.SplitHorizontal(_currentSplitRoom, minRoomDimension, variation);
         }
 
         if (Input.GetKeyDown(KeyCode.Return))
@@ -194,6 +185,10 @@ public class House
                             else if (floors[f].blocks[l, w].type.Equals("wall"))
                             {
                                 obj.GetComponent<MeshRenderer>().materials[0].color = floors[f].GetRoom(floors[f].blocks[l, w].GetRoomID()).wallColor;
+                            }
+                            else if (floors[f].blocks[l, w].type.Equals("window"))
+                            {
+                                obj.GetComponent<MeshRenderer>().materials[0].color = new Color(Color.blue.r, Color.blue.g, Color.blue.b, 0.5f);
                             }
                         }
 
@@ -614,6 +609,55 @@ public class Floor
     {
         RemoveEdgeRoom();
         AddDoors();
+        AddFrontDoor();
+
+        AddWindows();
+    }
+
+    public void AddFrontDoor()
+    {
+        var shuffledRooms = rooms.OrderBy(x => Random.value).ToList();
+
+        for (int i = 0; i < shuffledRooms.Count; i++)
+        {
+            var room = shuffledRooms[i]; 
+
+            for (int b = 0; b < room.blocks.Count; b++)
+            {
+                var block = room.blocks[b];
+
+                if(block.type == "wall" && block.direction.Length == 1 && block.isEdge)
+                {
+                    block.type = "door";
+                    return;
+                }
+            }
+        }
+    }
+
+    public void AddWindows()
+    {
+        var shuffledRooms = rooms.OrderBy(x => Random.value).ToList();
+
+        for (int i = 0; i < shuffledRooms.Count; i++)
+        {
+            var room = shuffledRooms[i];
+
+            for (int b = 0; b < room.blocks.Count; b++)
+            {
+                var block = room.blocks[b];
+
+                if (block.type == "wall" && block.direction.Length == 1 && block.isEdge)
+                {
+                    int chance = (int)((Random.value * 10) + 0.5f);
+
+                    if (chance > 5)
+                    {
+                        block.type = "window";
+                    }
+                }
+            }
+        }
     }
 
     public void AddDoors1()
