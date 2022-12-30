@@ -31,7 +31,7 @@ public class HouseConstructor : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         BLOCK_TYPES = new Dictionary<string, GameObject>();
 
@@ -39,14 +39,9 @@ public class HouseConstructor : MonoBehaviour
         BLOCK_TYPES.Add("corner", CornerBlock);
         BLOCK_TYPES.Add("floor", FloorBlock);
         BLOCK_TYPES.Add("door", DoorBlock);
-
-        print(BLOCK_TYPES["wall"]);
-
-        h = new House(length,width, BLOCK_TYPES, scale);
-        f = h.floors[0];
     }
 
-    public House HouseGen()
+    public House HouseGen(HouseTemplate template)
     {
         h = new House(length, width, BLOCK_TYPES, scale);
         for (int i = 0; i < roomSplitRepetitions; i++)
@@ -69,6 +64,13 @@ public class HouseConstructor : MonoBehaviour
             }
 
         }
+
+        for(int i = 0; i < template.rooms.Count; i++)
+        {
+            print(h.floors[0]);
+            //h.floors[0].rooms[i].floorColor = template.rooms[0].floorColor;
+        }
+
         h.BuildHouse();
         return h;
     }
@@ -365,13 +367,13 @@ public class Floor
 
         if (r1.GetLength() < minLength || r1.GetWidth() < minLength)
         {
-            Debug.Log("Room is too small! Cancelling split.");
+            //Debug.Log("Room is too small! Cancelling split.");
             return;
         }
 
         if (r2.GetLength() < minLength || r2.GetWidth() < minLength)
         {
-            Debug.Log("Room is too small! Cancelling split.");
+            //Debug.Log("Room is too small! Cancelling split.");
             return;
         }
 
@@ -448,13 +450,13 @@ public class Floor
 
         if (r1.GetLength() < minLength || r1.GetWidth() < minLength)
         {
-            Debug.Log("Room is too small! Cancelling split.");
+            //Debug.Log("Room is too small! Cancelling split.");
             return;
         }
 
         if (r2.GetLength() < minLength || r2.GetWidth() < minLength)
         {
-            Debug.Log("Room is too small! Cancelling split.");
+            //Debug.Log("Room is too small! Cancelling split.");
             return;
         }
 

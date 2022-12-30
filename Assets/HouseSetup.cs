@@ -7,6 +7,8 @@ public class HouseSetup : MonoBehaviour
 
     public float targetRoomCount = 4;
 
+    public HouseTemplate testHouseTemplate;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +26,11 @@ public class HouseSetup : MonoBehaviour
 
     void CreateHouseWithRooms()
     {
-        var house = GetComponent<HouseConstructor>().HouseGen();
+        var house = GetComponent<HouseConstructor>().HouseGen(testHouseTemplate);
 
-        while (house.floors[0].rooms.Count != targetRoomCount+1)
+        while (house.floors[0].rooms.Count != testHouseTemplate.rooms.Count + 1)
         {
-            house = GetComponent<HouseConstructor>().HouseGen();
+            house = GetComponent<HouseConstructor>().HouseGen(testHouseTemplate);
         }
 
         foreach (var floor in house.floors)
