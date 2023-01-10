@@ -43,6 +43,7 @@ public class HouseConstructor : MonoBehaviour
 
     public House HouseGen(HouseTemplate template)
     {
+        /*
         h = new House(length, width, BLOCK_TYPES, scale);
         for (int i = 0; i < roomSplitRepetitions; i++)
         {
@@ -59,16 +60,29 @@ public class HouseConstructor : MonoBehaviour
                 {
                     var room = Random.Range(0, h.floors[0].rooms.Count);
                     var id = h.floors[0].GetRoomID(room);
-                    h.floors[0].SplitVertical(id, minRoomDimension, variation);
+                    h.floors[0].SplitVerticalR(id, minRoomDimension, variation);
                 }
             }
 
         }
+        */
+        h = new House(length, width, BLOCK_TYPES, scale);
+        int roomCount = template.rooms.Count;
 
-        for(int i = 0; i < template.rooms.Count; i++)
+        for(int i = 0; i < roomCount; i++)
         {
-            print(h.floors[0]);
-            //h.floors[0].rooms[i].floorColor = template.rooms[0].floorColor;
+            var rand = Random.Range(0, 3);
+            var room = Random.Range(0, h.floors[0].rooms.Count);
+            var id = h.floors[0].GetRoomID(room);
+
+            if (rand == 0)
+            {
+                h.floors[0].SplitHorizontal(id, minRoomDimension, variation);
+            }
+            else
+            {
+                h.floors[0].SplitVertical(id, minRoomDimension, variation);
+            }
         }
 
         h.BuildHouse();
@@ -78,50 +92,6 @@ public class HouseConstructor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            f.PrintRoom(_currentSplitRoom);
-
-            Debug.Log(f.GetRoom(_currentSplitRoom).GetLength() + " : " + f.GetRoom(_currentSplitRoom).GetWidth());
-        }
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            //f.PrintRoomDir();
-
-            Debug.Log(f.GetRoom(_currentSplitRoom).GetLength() + " : " + f.GetRoom(_currentSplitRoom).GetWidth());
-        }
-
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            h.BuildHouse();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            h = new House(length,width,BLOCK_TYPES, scale);
-            for (int i = 0; i < roomSplitRepetitions; i++)
-            {
-                for (int r = 0; r < h.floors[0].rooms.Count; r++)
-                {
-                    var rand = Random.Range(0, 3);
-                    if (rand == 1)
-                    {
-                        var room = Random.Range(0, h.floors[0].rooms.Count);
-                        var id = h.floors[0].GetRoomID(room);
-                        h.floors[0].SplitHorizontal(id, minRoomDimension, variation);
-                    }
-                    else
-                    {
-                        var room = Random.Range(0, h.floors[0].rooms.Count);
-                        var id = h.floors[0].GetRoomID(room);
-                        h.floors[0].SplitVertical(id, minRoomDimension, variation);
-                    }
-                }
-                
-            }
-            h.BuildHouse();
-        }
 
     }
 }
@@ -307,74 +277,82 @@ public class Floor
         var sLength = splitRoom.GetLength();
         var sWidth = splitRoom.GetWidth();
 
-        int variation = Random.Range(0, Mathf.Min(maxVar, sWidth / 2));
-
-        int[] startPos = splitRoom.topLeftCorner.GetBlockLocation(this);
-
-        List<Block> blocks1 = new List<Block>();
-        List<Block> blocks2 = new List<Block>();
-
-        Block[] corners1 = new Block[2];
-        Block[] corners2 = new Block[2];
-
-        int add = -variation;
-        if (sWidth % 2 == 0)
-        {
-            for (int l = startPos[0]; l < startPos[0] + sLength; l++)
-            {
-                for (int w = startPos[1]; w <= startPos[1] - variation + (sWidth / 2); w++)
-                {
-                    blocks1.Add(blocks[l, w]);
-                }
-            }
-
-            add += (startPos[1] + (sWidth / 2)) - 1;
-            corners1[0] = blocks[startPos[0], startPos[1]];
-            corners1[1] = blocks[(startPos[0] + sLength-1), add];
-        }
-        else
-        {
-            for (int l = startPos[0]; l < startPos[0] + sLength; l++)
-            {
-                for (int w = startPos[1]; w <= startPos[1] - variation + (sWidth / 2); w++)
-                {
-                    blocks1.Add(blocks[l, w]);
-                }
-            }
-
-            add += (startPos[1] + (sWidth / 2));
-            corners1[0] = blocks[startPos[0], startPos[1]];
-            corners1[1] = blocks[(startPos[0] + sLength-1), add];
-        }
-
-        for (int l = startPos[0]; l < startPos[0] + sLength; l++)
-        {
-            for (int w = startPos[1] - variation + Mathf.CeilToInt(sWidth / 2f); w < startPos[1] + sWidth; w++)
-            {
-                blocks2.Add(blocks[l, w]);
-            }
-        }
-
-        corners2[0] = blocks[startPos[0], add];
-        corners2[1] = blocks[(startPos[0] + sLength-1), (startPos[1] + sWidth-1)];
-
-
         Room r1 = new Room(this);
         Room r2 = new Room(this);
 
-        r1.SetBlocks(blocks1, corners1[0], corners1[1]);
-        r2.SetBlocks(blocks2, corners2[0], corners2[1]);
-
-        if (r1.GetLength() < minLength || r1.GetWidth() < minLength)
+        bool success = false;
+        while (success == false)
         {
-            //Debug.Log("Room is too small! Cancelling split.");
-            return;
-        }
+            int variation = Random.Range(0, Mathf.Min(maxVar, sWidth / 2));
 
-        if (r2.GetLength() < minLength || r2.GetWidth() < minLength)
-        {
-            //Debug.Log("Room is too small! Cancelling split.");
-            return;
+            int[] startPos = splitRoom.topLeftCorner.GetBlockLocation(this);
+
+            List<Block> blocks1 = new List<Block>();
+            List<Block> blocks2 = new List<Block>();
+
+            Block[] corners1 = new Block[2];
+            Block[] corners2 = new Block[2];
+
+            int add = -variation;
+            if (sWidth % 2 == 0)
+            {
+                for (int l = startPos[0]; l < startPos[0] + sLength; l++)
+                {
+                    for (int w = startPos[1]; w <= startPos[1] - variation + (sWidth / 2); w++)
+                    {
+                        blocks1.Add(blocks[l, w]);
+                    }
+                }
+
+                add += (startPos[1] + (sWidth / 2)) - 1;
+                corners1[0] = blocks[startPos[0], startPos[1]];
+                corners1[1] = blocks[(startPos[0] + sLength - 1), add];
+            }
+            else
+            {
+                for (int l = startPos[0]; l < startPos[0] + sLength; l++)
+                {
+                    for (int w = startPos[1]; w <= startPos[1] - variation + (sWidth / 2); w++)
+                    {
+                        blocks1.Add(blocks[l, w]);
+                    }
+                }
+
+                add += (startPos[1] + (sWidth / 2));
+                corners1[0] = blocks[startPos[0], startPos[1]];
+                corners1[1] = blocks[(startPos[0] + sLength - 1), add];
+            }
+
+            for (int l = startPos[0]; l < startPos[0] + sLength; l++)
+            {
+                for (int w = startPos[1] - variation + Mathf.CeilToInt(sWidth / 2f); w < startPos[1] + sWidth; w++)
+                {
+                    blocks2.Add(blocks[l, w]);
+                }
+            }
+
+            corners2[0] = blocks[startPos[0], add];
+            corners2[1] = blocks[(startPos[0] + sLength - 1), (startPos[1] + sWidth - 1)];
+
+            r1 = new Room(this);
+            r2 = new Room(this);
+
+            r1.SetBlocks(blocks1, corners1[0], corners1[1]);
+            r2.SetBlocks(blocks2, corners2[0], corners2[1]);
+
+            if (r1.GetLength() < minLength || r1.GetWidth() < minLength)
+            {
+                //Debug.Log("Room is too small! Cancelling split.");
+                continue;
+            }
+
+            if (r2.GetLength() < minLength || r2.GetWidth() < minLength)
+            {
+                //Debug.Log("Room is too small! Cancelling split.");
+                continue;
+            }
+
+            success = true;
         }
 
         rooms.Remove(splitRoom);
@@ -390,74 +368,85 @@ public class Floor
         var sLength = splitRoom.GetLength();
         var sWidth = splitRoom.GetWidth();
 
-        int variation = Random.Range(0, Mathf.Min(maxVar, sLength / 2));
-
-        int[] startPos = splitRoom.topLeftCorner.GetBlockLocation(this);
-
-        List<Block> blocks1 = new List<Block>();
-        List<Block> blocks2 = new List<Block>();
-
-        Block[] corners1 = new Block[2];
-        Block[] corners2 = new Block[2];
-
-        int add = -variation;
-        if (sLength % 2 == 0)
-        {
-            for (int l = startPos[0]; l <= startPos[0] -variation + (sLength / 2); l++)
-            {
-                for (int w = startPos[1]; w < startPos[1] + sWidth; w++)
-                {
-                    blocks1.Add(blocks[l, w]);
-                }
-            }
-            add += (startPos[0] + (sLength / 2)) - 1;
-            corners1[0] = blocks[startPos[0], startPos[1]];
-            corners1[1] = blocks[add, (startPos[1] + sWidth - 1)];
-        }
-        else
-        {
-            for (int l = startPos[0]; l <= startPos[0] - variation + (sLength / 2); l++)
-            {
-                for (int w = startPos[1]; w < startPos[1] + sWidth; w++)
-                {
-                    blocks1.Add(blocks[l, w]);
-                }
-            }
-
-            add += (startPos[0] + (sLength / 2));
-            corners1[0] = blocks[startPos[0], startPos[1]];
-            corners1[1] = blocks[add, (startPos[1] + sWidth - 1)];
-        }
-
-        for (int l = startPos[0] - variation + Mathf.CeilToInt(sLength / 2f); l < startPos[0] + sLength; l++)
-        {
-            for (int w = startPos[1]; w < startPos[1] + sWidth; w++)
-            {
-
-                blocks2.Add(blocks[l, w]);
-            }
-        }
-
-        corners2[0] = blocks[add, startPos[1]];
-        corners2[1] = blocks[(startPos[0] + sLength - 1), (startPos[1] + sWidth - 1)];
-
-
         Room r1 = new Room(this);
         Room r2 = new Room(this);
 
-        r1.SetBlocks(blocks1, corners1[0], corners1[1]);
-        r2.SetBlocks(blocks2, corners2[0], corners2[1]);
+        bool success = false;
 
-        if (r1.GetLength() < minLength || r1.GetWidth() < minLength)
+        while (success == false)
         {
-            //Debug.Log("Room is too small! Cancelling split.");
-            return;
-        }
 
-        if (r2.GetLength() < minLength || r2.GetWidth() < minLength)
-        {
-            //Debug.Log("Room is too small! Cancelling split.");
-            return;
+            int variation = Random.Range(0, Mathf.Min(maxVar, sLength / 2));
+
+            int[] startPos = splitRoom.topLeftCorner.GetBlockLocation(this);
+
+            List<Block> blocks1 = new List<Block>();
+            List<Block> blocks2 = new List<Block>();
+
+            Block[] corners1 = new Block[2];
+            Block[] corners2 = new Block[2];
+
+            int add = -variation;
+            if (sLength % 2 == 0)
+            {
+                for (int l = startPos[0]; l <= startPos[0] - variation + (sLength / 2); l++)
+                {
+                    for (int w = startPos[1]; w < startPos[1] + sWidth; w++)
+                    {
+                        blocks1.Add(blocks[l, w]);
+                    }
+                }
+                add += (startPos[0] + (sLength / 2)) - 1;
+                corners1[0] = blocks[startPos[0], startPos[1]];
+                corners1[1] = blocks[add, (startPos[1] + sWidth - 1)];
+            }
+            else
+            {
+                for (int l = startPos[0]; l <= startPos[0] - variation + (sLength / 2); l++)
+                {
+                    for (int w = startPos[1]; w < startPos[1] + sWidth; w++)
+                    {
+                        blocks1.Add(blocks[l, w]);
+                    }
+                }
+
+                add += (startPos[0] + (sLength / 2));
+                corners1[0] = blocks[startPos[0], startPos[1]];
+                corners1[1] = blocks[add, (startPos[1] + sWidth - 1)];
+            }
+
+            for (int l = startPos[0] - variation + Mathf.CeilToInt(sLength / 2f); l < startPos[0] + sLength; l++)
+            {
+                for (int w = startPos[1]; w < startPos[1] + sWidth; w++)
+                {
+
+                    blocks2.Add(blocks[l, w]);
+                }
+            }
+
+            corners2[0] = blocks[add, startPos[1]];
+            corners2[1] = blocks[(startPos[0] + sLength - 1), (startPos[1] + sWidth - 1)];
+
+
+            r1 = new Room(this);
+            r2 = new Room(this);
+
+            r1.SetBlocks(blocks1, corners1[0], corners1[1]);
+            r2.SetBlocks(blocks2, corners2[0], corners2[1]);
+
+            if (r1.GetLength() < minLength || r1.GetWidth() < minLength)
+            {
+                //Debug.Log("Room is too small! Cancelling split.");
+                continue;
+            }
+
+            if (r2.GetLength() < minLength || r2.GetWidth() < minLength)
+            {
+                //Debug.Log("Room is too small! Cancelling split.");
+                continue;
+            }
+
+            success = true;
         }
 
         rooms.Remove(splitRoom);

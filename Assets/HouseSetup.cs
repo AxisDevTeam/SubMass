@@ -5,8 +5,6 @@ using UnityEngine;
 public class HouseSetup : MonoBehaviour
 {
 
-    public float targetRoomCount = 4;
-
     public HouseTemplate testHouseTemplate;
 
     // Start is called before the first frame update
@@ -27,18 +25,19 @@ public class HouseSetup : MonoBehaviour
     void CreateHouseWithRooms()
     {
         var house = GetComponent<HouseConstructor>().HouseGen(testHouseTemplate);
+        int count = 0;
 
-        while (house.floors[0].rooms.Count != testHouseTemplate.rooms.Count + 1)
+        while (house.floors[0].rooms.Count-1 != testHouseTemplate.rooms.Count)
         {
+            print(house.floors[0].rooms.Count - 1 + " : " + testHouseTemplate.rooms.Count);
+
             house = GetComponent<HouseConstructor>().HouseGen(testHouseTemplate);
-        }
 
-        foreach (var floor in house.floors)
-        {
-            while (floor.rooms.Count != targetRoomCount + 1)
+            if (count == 100)
             {
-                house = GetComponent<HouseConstructor>().HouseGen();
+                break;
             }
+            count++;
         }
 
         return;
