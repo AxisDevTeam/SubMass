@@ -72,16 +72,40 @@ public class HouseConstructor : MonoBehaviour
         for(int i = 0; i < roomCount; i++)
         {
             var rand = Random.Range(0, 3);
-            var room = Random.Range(0, h.floors[0].rooms.Count);
-            var id = h.floors[0].GetRoomID(room);
 
             if (rand == 0)
             {
-                h.floors[0].SplitHorizontal(id, minRoomDimension, variation);
+                var success = false;
+                int n = 0;
+                while(success == false)
+                {
+                    if (n > 50)
+                    {
+                        Debug.Log("Cancelling due to too many failed attempts.");
+                        break;
+                    }
+                    var room = Random.Range(0, h.floors[0].rooms.Count);
+                    var id = h.floors[0].GetRoomID(room);
+                    success = h.floors[0].SplitHorizontal(id, minRoomDimension, variation);
+                    n++;
+                }
             }
             else
             {
-                h.floors[0].SplitVertical(id, minRoomDimension, variation);
+                var success = false;
+                int n = 0;
+                while (success == false)
+                {
+                    if (n > 50)
+                    {
+                        Debug.Log("Cancelling due to too many failed attempts.");
+                        break;
+                    }
+                    var room = Random.Range(0, h.floors[0].rooms.Count);
+                    var id = h.floors[0].GetRoomID(room);
+                    success = h.floors[0].SplitVertical(id, minRoomDimension, variation);
+                    n++;
+                }
             }
         }
 
@@ -271,7 +295,7 @@ public class Floor
         }
     }
 
-    public void SplitVertical(int roomNum, int minLength, int maxVar)
+    public bool SplitVertical(int roomNum, int minLength, int maxVar)
     {
         Room splitRoom = GetRoom(roomNum);
         var sLength = splitRoom.GetLength();
@@ -281,8 +305,13 @@ public class Floor
         Room r2 = new Room(this);
 
         bool success = false;
+        int trials = 0;
         while (success == false)
         {
+            if (trials > 100)
+            {
+                return false;
+            }
             int variation = Random.Range(0, Mathf.Min(maxVar, sWidth / 2));
 
             int[] startPos = splitRoom.topLeftCorner.GetBlockLocation(this);
@@ -340,6 +369,8 @@ public class Floor
             r1.SetBlocks(blocks1, corners1[0], corners1[1]);
             r2.SetBlocks(blocks2, corners2[0], corners2[1]);
 
+            trials++;
+
             if (r1.GetLength() < minLength || r1.GetWidth() < minLength)
             {
                 //Debug.Log("Room is too small! Cancelling split.");
@@ -360,9 +391,10 @@ public class Floor
         rooms.Add(r2);
 
         UpdateRoomData();
+        return true;
     }
 
-    public void SplitHorizontal(int roomNum, int minLength, int maxVar)
+    public bool SplitHorizontal(int roomNum, int minLength, int maxVar)
     {
         Room splitRoom = GetRoom(roomNum);
         var sLength = splitRoom.GetLength();
@@ -372,10 +404,14 @@ public class Floor
         Room r2 = new Room(this);
 
         bool success = false;
+        int trials = 0;
 
         while (success == false)
         {
-
+            if(trials > 100)
+            {
+                return false;
+            }
             int variation = Random.Range(0, Mathf.Min(maxVar, sLength / 2));
 
             int[] startPos = splitRoom.topLeftCorner.GetBlockLocation(this);
@@ -434,6 +470,8 @@ public class Floor
             r1.SetBlocks(blocks1, corners1[0], corners1[1]);
             r2.SetBlocks(blocks2, corners2[0], corners2[1]);
 
+            trials++;
+
             if (r1.GetLength() < minLength || r1.GetWidth() < minLength)
             {
                 //Debug.Log("Room is too small! Cancelling split.");
@@ -454,6 +492,7 @@ public class Floor
         rooms.Add(r2);
 
         UpdateRoomData();
+        return true;
     }
 
     public Room GetRoom(int idNum)
