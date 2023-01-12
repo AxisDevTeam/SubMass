@@ -25,6 +25,7 @@ public class HouseSetup : MonoBehaviour
     void CreateHouseWithRooms()
     {
         var house = GetComponent<HouseConstructor>().HouseGen(testHouseTemplate);
+        /*
         int count = 0;
 
         while (house.floors[0].rooms.Count-1 != testHouseTemplate.rooms.Count)
@@ -39,6 +40,7 @@ public class HouseSetup : MonoBehaviour
             }
             count++;
         }
+        */
 
         return;
     }

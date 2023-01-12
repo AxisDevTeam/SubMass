@@ -69,47 +69,28 @@ public class HouseConstructor : MonoBehaviour
         h = new House(length, width, BLOCK_TYPES, scale);
         int roomCount = template.rooms.Count;
 
-        for(int i = 0; i < roomCount; i++)
+        while(h.floors[0].rooms.Count != roomCount+1)
         {
-            var rand = Random.Range(0, 3);
+            int count = 0;
+            while(true)
+            {
+                int room = count % h.floors[0].rooms.Count;
+                var id = h.floors[0].GetRoomID(room);
 
-            if (rand == 0)
-            {
-                var success = false;
-                int n = 0;
-                while(success == false)
+                var choose = (Random.Range(0, 2)==1) ? h.floors[0].SplitHorizontal(id, minRoomDimension, variation) : h.floors[0].SplitVertical(id, minRoomDimension, variation);
+
+                if (choose)
                 {
-                    if (n > 50)
-                    {
-                        Debug.Log("Cancelling due to too many failed attempts.");
-                        break;
-                    }
-                    var room = Random.Range(0, h.floors[0].rooms.Count);
-                    var id = h.floors[0].GetRoomID(room);
-                    success = h.floors[0].SplitHorizontal(id, minRoomDimension, variation);
-                    n++;
+                    print("H split made");
+                    break;
                 }
+                count++;
             }
-            else
-            {
-                var success = false;
-                int n = 0;
-                while (success == false)
-                {
-                    if (n > 50)
-                    {
-                        Debug.Log("Cancelling due to too many failed attempts.");
-                        break;
-                    }
-                    var room = Random.Range(0, h.floors[0].rooms.Count);
-                    var id = h.floors[0].GetRoomID(room);
-                    success = h.floors[0].SplitVertical(id, minRoomDimension, variation);
-                    n++;
-                }
-            }
+
         }
-
+        
         h.BuildHouse();
+        print("Room Count" + h.floors[0].rooms.Count);
         return h;
     }
 
@@ -298,6 +279,7 @@ public class Floor
     public bool SplitVertical(int roomNum, int minLength, int maxVar)
     {
         Room splitRoom = GetRoom(roomNum);
+        //var splitRoom = room;
         var sLength = splitRoom.GetLength();
         var sWidth = splitRoom.GetWidth();
 
@@ -313,6 +295,7 @@ public class Floor
                 return false;
             }
             int variation = Random.Range(0, Mathf.Min(maxVar, sWidth / 2));
+            variation = 0;
 
             int[] startPos = splitRoom.topLeftCorner.GetBlockLocation(this);
 
@@ -397,6 +380,7 @@ public class Floor
     public bool SplitHorizontal(int roomNum, int minLength, int maxVar)
     {
         Room splitRoom = GetRoom(roomNum);
+        //var splitRoom = room;
         var sLength = splitRoom.GetLength();
         var sWidth = splitRoom.GetWidth();
 
@@ -413,6 +397,7 @@ public class Floor
                 return false;
             }
             int variation = Random.Range(0, Mathf.Min(maxVar, sLength / 2));
+            variation = 0;
 
             int[] startPos = splitRoom.topLeftCorner.GetBlockLocation(this);
 
@@ -637,7 +622,7 @@ public class Floor
 
     public void Final()
     {
-        RemoveEdgeRoom();
+        //RemoveEdgeRoom();
         AddDoors();
         AddFrontDoor();
 
@@ -959,11 +944,13 @@ public class Floor
                         block.direction = "X";
                         block.type = "null";
                     }
+                    rooms.Remove(room);
                     return;
                 }
             }
-
         }
+
+
     }
 }
 
