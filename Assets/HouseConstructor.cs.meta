@@ -3,7 +3,15 @@ guid: d505e91fad13fda4ea9d579e1b92801a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - WallBlock: {fileID: 919132149155446097, guid: 0ff5d6da358fc46de98d2b9182c0666d,
+      type: 3}
+  - CornerBlock: {fileID: 919132149155446097, guid: a112e3aa72b3547d4a62b7cd0d90059f,
+      type: 3}
+  - FloorBlock: {fileID: 919132149155446097, guid: b81ab42694b63e44c9cc53e8f23c9e91,
+      type: 3}
+  - DoorBlock: {fileID: 919132149155446097, guid: 0ff5d6da358fc46de98d2b9182c0666d,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

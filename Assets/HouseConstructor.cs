@@ -41,57 +41,109 @@ public class HouseConstructor : MonoBehaviour
         BLOCK_TYPES.Add("door", DoorBlock);
     }
 
+    public House HouseConfigure(House h, HouseTemplate template)
+    {
+        int count = 0;
+
+        var rooms = h.floors[0].rooms;
+        rooms = rooms.OrderBy(a => a.blocks.Count).ToList();
+
+        foreach (var r in rooms)
+        {
+            //print(count + " : " + template.rooms[count].wallColor);
+            r.wallColor = template.rooms[count].wallColor;
+            r.floorColor = template.rooms[count].floorColor;
+            count++;
+        }
+
+        return h;
+    }
+
     public House HouseGen(HouseTemplate template)
     {
-        /*
-        h = new House(length, width, BLOCK_TYPES, scale);
-        for (int i = 0; i < roomSplitRepetitions; i++)
-        {
-            for (int r = 0; r < h.floors[0].rooms.Count; r++)
-            {
-                var rand = Random.Range(0, 3);
-                if (rand == 1)
-                {
-                    var room = Random.Range(0, h.floors[0].rooms.Count);
-                    var id = h.floors[0].GetRoomID(room);
-                    h.floors[0].SplitHorizontal(id, minRoomDimension, variation);
-                }
-                else
-                {
-                    var room = Random.Range(0, h.floors[0].rooms.Count);
-                    var id = h.floors[0].GetRoomID(room);
-                    h.floors[0].SplitVerticalR(id, minRoomDimension, variation);
-                }
-            }
-
-        }
-        */
         h = new House(length, width, BLOCK_TYPES, scale);
         int roomCount = template.rooms.Count;
 
-        while(h.floors[0].rooms.Count != roomCount+1)
+        void repeatRoomGen()
         {
-            int count = 0;
-            while(true)
-            {
-                int room = count % h.floors[0].rooms.Count;
-                var id = h.floors[0].GetRoomID(room);
+            var success = false;
 
-                var choose = (Random.Range(0, 2)==1) ? h.floors[0].SplitHorizontal(id, minRoomDimension, variation) : h.floors[0].SplitVertical(id, minRoomDimension, variation);
+            List<int> roomids = new List<int>();
+            for (int i = 0; i < h.floors[0].rooms.Count; i++)
+            {
+                roomids.Add(i);
+            }
+
+            //roomids = roomids.OrderBy(a => Random.value).ToList();
+
+            foreach (var r in roomids)
+            {
+                var id = h.floors[0].GetRoomID(r);
+
+
+                var choose = h.floors[0].SplitHorizontal(id, minRoomDimension, variation);
+                if(choose == false)
+                {
+                    choose = h.floors[0].SplitVertical(id, minRoomDimension, variation);
+                }
+
+                //var choose = (Random.Range(0, 2) == 1) ? h.floors[0].SplitHorizontal(id, minRoomDimension, variation) : 
 
                 if (choose)
                 {
-                    print("H split made");
+                    success = true;
                     break;
                 }
-                count++;
+            }
+
+            if(success == false)
+            {
+                //print("the repeat still failed somehow???");
+                //Debug.Log(string.Join(", ", roomids));
+                foreach (var r in h.floors[0].rooms)
+                {
+                    //print(r.id + " : " + r.GetLength() + "/" + r.GetWidth());
+                }
+                //UnityEditor.EditorApplication.isPlaying = false;
+                //Debug.Break();
+                //h = HouseGen(template);
             }
 
         }
-        
+
+        var iterations = 0;
+        for (int i = 0; i < roomCount - 1; i++)
+        {
+            var room = Random.Range(0, h.floors[0].rooms.Count);
+            var id = h.floors[0].GetRoomID(room);
+            var choose = (Random.Range(0, 2) == 1) ? h.floors[0].SplitHorizontal(id, minRoomDimension, variation) : h.floors[0].SplitVertical(id, minRoomDimension, variation);
+
+            if (choose == false)
+            {
+                //print("cant find suitable room for split??");
+                repeatRoomGen();
+            }
+
+            if (iterations >= 100)
+            {
+                break;
+            }
+        }
+
+        //take random layout and apply template attributes to it
+        h = HouseConfigure(h, template);
+
         h.BuildHouse();
         print("Room Count" + h.floors[0].rooms.Count);
-        return h;
+
+        if(h.floors[0].rooms.Count != template.rooms.Count)
+        {
+            return HouseGen(template);
+        }
+        else
+        {
+            return h;
+        }
     }
 
     // Update is called once per frame
@@ -288,15 +340,20 @@ public class Floor
 
         bool success = false;
         int trials = 0;
-        while (success == false)
-        {
-            if (trials > 100)
-            {
-                return false;
-            }
-            int variation = Random.Range(0, Mathf.Min(maxVar, sWidth / 2));
-            variation = 0;
 
+        List<int> randIds = new List<int>();
+        for (int i = 0; i < Mathf.Min(maxVar, sWidth / 3); i++)
+        //for (int i = 0; i < 1; i++)
+        {
+            randIds.Add(i);
+        }
+
+        randIds = randIds.OrderBy(a => Random.value).ToList();
+        //Debug.Log(string.Join(", ", randIds));
+
+        foreach (var vari in randIds)
+        {
+            var variation = vari;
             int[] startPos = splitRoom.topLeftCorner.GetBlockLocation(this);
 
             List<Block> blocks1 = new List<Block>();
@@ -367,6 +424,13 @@ public class Floor
             }
 
             success = true;
+            break;
+        }
+
+        if(success == false)
+        {
+            Debug.Log("split failed (vertical)");
+            return false;
         }
 
         rooms.Remove(splitRoom);
@@ -390,14 +454,22 @@ public class Floor
         bool success = false;
         int trials = 0;
 
-        while (success == false)
+        List<int> randIds = new List<int>();
+        for (int i = 0; i < Mathf.Min(maxVar, sLength / 3); i++)
+        //for (int i = 0; i < 1; i++)
         {
-            if(trials > 100)
-            {
-                return false;
-            }
-            int variation = Random.Range(0, Mathf.Min(maxVar, sLength / 2));
-            variation = 0;
+            randIds.Add(i);
+        }
+
+        randIds = randIds.OrderBy(a => Random.value).ToList();
+        //Debug.Log(string.Join(", ", randIds));
+
+        foreach (var vari in randIds)
+        {
+            //int variation = Random.Range(0, Mathf.Min(maxVar, sLength / 2));
+            //variation = 0;
+
+            var variation = vari;
 
             int[] startPos = splitRoom.topLeftCorner.GetBlockLocation(this);
 
@@ -470,6 +542,13 @@ public class Floor
             }
 
             success = true;
+            break;
+        }
+
+        if(success == false)
+        {
+            Debug.Log("split failed (horizontal)");
+            return false;
         }
 
         rooms.Remove(splitRoom);

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ffe01d6106484741baa53fa6945c961, type: 3}
-  m_Name: Room6
+  m_Name: Master Bedroom
   m_EditorClassIdentifier: 
-  wallColor: {r: 0.37647063, g: 0.8784314, b: 0.75547343, a: 1}
+  wallColor: {r: 1, g: 1, b: 1, a: 1}
   floorColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

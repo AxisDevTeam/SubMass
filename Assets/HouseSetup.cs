@@ -20,6 +20,10 @@ public class HouseSetup : MonoBehaviour
         {
             CreateHouseWithRooms();
         }
+        if (Input.GetKey("2"))
+        {
+            CreateHouseWithRooms();
+        }
     }
 
     void CreateHouseWithRooms()
