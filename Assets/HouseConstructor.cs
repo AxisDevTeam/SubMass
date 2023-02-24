@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class HouseConstructor : MonoBehaviour
 {
-    public int length;
-    public int width;
     public Floor f;
     public House h;
     public int _currentSplitRoom = 0;
@@ -41,6 +39,22 @@ public class HouseConstructor : MonoBehaviour
         BLOCK_TYPES.Add("door", DoorBlock);
     }
 
+    public void HouseFurnish(House h, HouseTemplate template)
+    {
+        foreach(var room in template.rooms)
+        {
+            foreach (var f in room.furniture)
+            {
+                switch (f.priority)
+                {
+                    case FurniturePlacementPriority.required:
+                        break;
+                }
+            }
+        }
+    }
+
+    //match house with template attributes like color
     public House HouseConfigure(House h, HouseTemplate template)
     {
         int count = 0;
@@ -61,7 +75,16 @@ public class HouseConstructor : MonoBehaviour
 
     public House HouseGen(HouseTemplate template)
     {
-        h = new House(length, width, BLOCK_TYPES, scale);
+        var l = template.length;
+        var w = template.width;
+
+        if (template.randomSize)
+        {
+            l = Random.Range(template.lengthRange.x, template.lengthRange.y + 1);
+            w = Random.Range(template.widthRange.x, template.widthRange.y + 1);
+        }
+
+        h = new House(l, w, BLOCK_TYPES, scale);
         int roomCount = template.rooms.Count;
 
         void repeatRoomGen()
@@ -136,7 +159,9 @@ public class HouseConstructor : MonoBehaviour
         h.BuildHouse();
         print("Room Count" + h.floors[0].rooms.Count);
 
-        if(h.floors[0].rooms.Count != template.rooms.Count)
+        HouseFurnish(h, template);
+
+        if (h.floors[0].rooms.Count != template.rooms.Count)
         {
             return HouseGen(template);
         }
@@ -245,9 +270,10 @@ public class House
     }
 }
 
-public class Floor
+public class Floor 
 {
     public Block[,] blocks;
+    public FurnitureBlock[,] fBlocks;
     public List<Room> rooms;
     
 
@@ -256,6 +282,7 @@ public class Floor
         List<Block> b = new List<Block>();
         // populate blocks list with new blocks of roomID 0
         blocks = new Block[length, width];
+        fBlocks = new FurnitureBlock[length, width];
         rooms = new List<Room>();
         for (int l = 0; l < blocks.GetLength(0); l++)
         {
@@ -701,11 +728,12 @@ public class Floor
 
     public void Final()
     {
-        //RemoveEdgeRoom();
-        AddDoors();
-        AddFrontDoor();
+        //temporarily commenting this out while i figure out furniture placement logic :)
 
-        AddWindows();
+        //AddDoors();
+        //AddFrontDoor();
+
+        //AddWindows();
     }
 
     public void AddFrontDoor()
@@ -1223,4 +1251,20 @@ public class Block
         }
         return false;
     }
+}
+
+public class FurnitureBlock{
+
+    public Furniture furniture;
+
+    public FurnitureBlock()
+    {
+        this.furniture = null;
+    }
+
+    public FurnitureBlock(Furniture f)
+    {
+        this.furniture = f;
+    }
+
 }

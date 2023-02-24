@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallColor: {r: 0.7783019, g: 1, b: 0.9596588, a: 1}
   floorColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  furniture:
+  - furniture: {fileID: 0}
+    placement: 0
