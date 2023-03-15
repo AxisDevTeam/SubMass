@@ -41,13 +41,56 @@ public class HouseConstructor : MonoBehaviour
 
     public void HouseFurnish(House h, HouseTemplate template)
     {
-        foreach(var room in template.rooms)
+        foreach(var templateRoom in template.rooms)
         {
-            foreach (var f in room.furniture)
+            foreach (var f in templateRoom.furniture)
             {
                 switch (f.priority)
                 {
                     case FurniturePlacementPriority.required:
+
+                        if(f.placement == FurniturePlacement.corner)
+                        {
+
+                            // find the room
+                            Room room = null;
+                            int index = 0;
+                            foreach (var r in h.floors[0].rooms)
+                            {
+                                index++;
+                                if (r.template == templateRoom)
+                                {
+                                    room = r;
+                                }
+                            }
+                            if(room == null)
+                            {
+                                Debug.LogError("something went VERY wrong cause i cant find the room...");
+                            }
+
+                            // get a randomized list of blocks in the room
+                            var b = room.blocks.OrderBy(x => Random.value).ToList();
+
+                            for (int i = 0; i < b.Count; i++)
+                            {
+                                // go through each block in list, place furniture if corner works
+                                var block = b[i];
+
+                                if (block.direction.Length == 2)
+                                {
+                                    // get the location of the block and initiate place if that fBlock is empty
+                                    var loc = block.GetBlockLocation(h.floors[0]);
+                                    if(h.floors[0].fBlocks[loc[0],loc[1]].isEmpty == true)
+                                    {
+                                        h.floors[0].PlaceFurniture(f.furniture, room,  loc);
+                                        break;
+                                    }
+                                }
+                            }
+
+
+                        }
+
                         break;
                 }
             }
@@ -57,17 +100,15 @@ public class HouseConstructor : MonoBehaviour
     //match house with template attributes like color
     public House HouseConfigure(House h, HouseTemplate template)
     {
-        int count = 0;
+        h.floors[0].rooms = h.floors[0].rooms.OrderBy(a => a.blocks.Count).ToList();
 
-        var rooms = h.floors[0].rooms;
-        rooms = rooms.OrderBy(a => a.blocks.Count).ToList();
-
-        foreach (var r in rooms)
+        for(int i = 0; i < h.floors[0].rooms.Count; i++)
         {
-            //print(count + " : " + template.rooms[count].wallColor);
-            r.wallColor = template.rooms[count].wallColor;
-            r.floorColor = template.rooms[count].floorColor;
-            count++;
+            //var r = h.floors[0].rooms[i];
+            //print(i + " : " + h.floors[0].rooms[i].blocks.Count + " : " + template.rooms[i]);
+            h.floors[0].rooms[i].template = template.rooms[i];
+            h.floors[0].rooms[i].wallColor = template.rooms[i].wallColor;
+            h.floors[0].rooms[i].floorColor = template.rooms[i].floorColor;
         }
 
         return h;
@@ -119,19 +160,6 @@ public class HouseConstructor : MonoBehaviour
                 }
             }
 
-            if(success == false)
-            {
-                //print("the repeat still failed somehow???");
-                //Debug.Log(string.Join(", ", roomids));
-                foreach (var r in h.floors[0].rooms)
-                {
-                    //print(r.id + " : " + r.GetLength() + "/" + r.GetWidth());
-                }
-                //UnityEditor.EditorApplication.isPlaying = false;
-                //Debug.Break();
-                //h = HouseGen(template);
-            }
-
         }
 
         var iterations = 0;
@@ -157,16 +185,18 @@ public class HouseConstructor : MonoBehaviour
         h = HouseConfigure(h, template);
 
         h.BuildHouse();
-        print("Room Count" + h.floors[0].rooms.Count);
+        //print("Room Count" + h.floors[0].rooms.Count);
 
-        HouseFurnish(h, template);
+        //HouseFurnish(h, template);
 
         if (h.floors[0].rooms.Count != template.rooms.Count)
         {
-            return HouseGen(template);
+            h = HouseGen(template);
+            return h;
         }
         else
         {
+            HouseFurnish(h, template);
             return h;
         }
     }
@@ -195,6 +225,7 @@ public class House
     public void BuildHouse()
     {
         DestroyHouse();
+        DestroyFurniture();
         for (int i = 0; i<floors.Count; i++)
         {
             floors[0].Final();
@@ -268,6 +299,14 @@ public class House
         for (var i = 0; i < gameObjects.Length; i++)
             GameObject.Destroy(gameObjects[i]);
     }
+
+    public void DestroyFurniture()
+    {
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("furniture");
+
+        for (var i = 0; i < gameObjects.Length; i++)
+            GameObject.Destroy(gameObjects[i]);
+    }
 }
 
 public class Floor 
@@ -283,6 +322,15 @@ public class Floor
         // populate blocks list with new blocks of roomID 0
         blocks = new Block[length, width];
         fBlocks = new FurnitureBlock[length, width];
+
+        for (int l = 0; l < fBlocks.GetLength(0); l++)
+        {
+            for (int w = 0; w < fBlocks.GetLength(1); w++)
+            {
+                fBlocks[l, w] = new FurnitureBlock();
+            }
+        }
+
         rooms = new List<Room>();
         for (int l = 0; l < blocks.GetLength(0); l++)
         {
@@ -297,6 +345,137 @@ public class Floor
         var r = new Room(this);
         r.SetBlocks(b,blocks[0,0],blocks[length-1,width-1]);
         rooms.Add(r);
+    }
+
+    public bool PlaceFurniture(Furniture furniture, Room room, int[] location)
+    {
+        var rot = 0;
+        var dir = blocks[location[0], location[1]].direction;
+        var scale = 3;
+        for(int l = 0; l < furniture.length; l++)
+        {
+            for (int w = 0; w < furniture.width; w++)
+            {
+                switch (dir)
+                {
+                    case ("NE"):
+                        if (isValid(location[0] + l, location[1] + w) == false || fBlocks[location[0] + l, location[1] + w].isEmpty == false)
+                        {
+                            Debug.Log("furniture place failed");
+                            return false;
+                        }
+                        fBlocks[location[0] + l, location[1] + w].SetFurniture(furniture);
+                        fBlocks[location[0] + l, location[1] + w].isEmpty = false;
+                        break;
+                    case ("SE"):
+                        if (isValid(location[0] - w, location[1] - l) == false || fBlocks[location[0] - w, location[1] - l].isEmpty == false)
+                        {
+                            Debug.Log("furniture place failed");
+                            return false;
+                        }
+                        fBlocks[location[0] - w, location[1] - l].SetFurniture(furniture);
+                        fBlocks[location[0] - w, location[1] - l].isEmpty = false;
+
+                        rot = 90;
+                        break;
+                    case ("NW"):
+                        if (isValid(location[0] + l, location[1] + w) == false || fBlocks[location[0] + l, location[1] + w].isEmpty == false)
+                        {
+                            Debug.Log("furniture place failed");
+                            return false;
+                        }
+                        fBlocks[location[0] + l, location[1] + w].SetFurniture(furniture);
+                        fBlocks[location[0] + l, location[1] + w].isEmpty = false;
+                        rot = 0;
+                        break;
+                    case ("SW"):
+                        if (isValid(location[0] + -l, location[1] + -w) == false || fBlocks[location[0] + -l, location[1] + -w].isEmpty == false)
+                        {
+                            Debug.Log("furniture place failed");
+                            return false;
+                        }
+                        fBlocks[location[0] + -l, location[1] + -w].SetFurniture(furniture);
+                        fBlocks[location[0] + -l, location[1] + -w].isEmpty = false;
+                        rot = 180;
+                        break;
+                }
+            }
+        }
+
+        var obj = GameObject.Instantiate(furniture.furniture);
+        obj.transform.position = new Vector3(location[0], 0, location[1]) * scale;
+        obj.transform.rotation = Quaternion.Euler(new Vector3(-90, 90, 0) + new Vector3(0, rot, 0)) ;
+        obj.transform.localScale = new Vector3(scale, scale, scale);
+        obj.transform.position += (obj.transform.up * 0.4f * scale) + (obj.transform.right * 0.4f * scale);
+        obj.tag = "furniture";
+
+        
+
+        ColorFurniture(obj, room, furniture);
+
+        DebugDrawFurnitureBlocks();
+
+        return true;
+
+        
+    }
+
+    public void ColorFurniture(GameObject obj, Room room, Furniture fnt)
+    {
+        foreach(var ci in fnt.DynamicColorInfo)
+        {
+            int matID = ci.materialSlot;
+            string attName = ci.attributeName;
+
+            switch(ci.colorSource)
+            {
+                case (DynamicFurnitureColorSource.wall_color):
+                    obj.GetComponent<MeshRenderer>().materials[matID].SetColor(attName,room.wallColor);
+                    break;
+                case (DynamicFurnitureColorSource.floor_color):
+                    obj.GetComponent<MeshRenderer>().materials[matID].SetColor(attName, room.floorColor);
+                    break;
+                case (DynamicFurnitureColorSource.random):
+                    var col = Random.ColorHSV();
+                    obj.GetComponent<MeshRenderer>().materials[matID].SetColor(attName, col);
+                    break;
+
+            }
+            
+        }
+        
+    }
+
+    public void DebugDrawFurnitureBlocks()
+    {
+        var scale = 3f;
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("displayTest");
+        foreach (var g in gameObjects)
+        {
+            GameObject.Destroy(g);
+        }
+
+        for (int l = 0; l < fBlocks.GetLength(0); l++)
+        {
+            for (int w = 0; w < fBlocks.GetLength(1); w++)
+            {
+                GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                var gizmo = GameObject.Instantiate(sphere);
+                gizmo.transform.position = new Vector3(l * scale, 0.5f, w * scale);
+                gizmo.transform.rotation = Quaternion.Euler(new Vector3(-90, 90, 0));
+                gizmo.transform.localScale = new Vector3(0.5f, 0.5f, 2f);
+                gizmo.tag = "displayTest";
+                if (fBlocks[l, w].isEmpty == false)
+                {
+                    gizmo.GetComponent<MeshRenderer>().material.color = Color.cyan;
+                }
+                else
+                {
+                    gizmo.GetComponent<MeshRenderer>().material.color = Color.red;
+                }
+
+            }
+        }
     }
 
     public bool isValid(int l, int w)
@@ -456,7 +635,7 @@ public class Floor
 
         if(success == false)
         {
-            Debug.Log("split failed (vertical)");
+            //Debug.Log("split failed (vertical)");
             return false;
         }
 
@@ -574,7 +753,7 @@ public class Floor
 
         if(success == false)
         {
-            Debug.Log("split failed (horizontal)");
+            //Debug.Log("split failed (horizontal)");
             return false;
         }
 
@@ -1072,6 +1251,8 @@ public class Room
     public Block bottomRightCorner;
     public Floor h;
 
+    public RoomTemplate template;
+
     public Color wallColor;
     public Color floorColor;
 
@@ -1086,6 +1267,16 @@ public class Room
 
         wallColor = Random.ColorHSV();
         floorColor = Random.ColorHSV();
+    }
+
+    public void SetTemplate(RoomTemplate rt)
+    {
+        template = rt;
+    }
+
+    public RoomTemplate GetTemplate()
+    {
+        return template;
     }
 
     public void SetBlocks(List<Block> b, Block tLC, Block bRC)
@@ -1104,6 +1295,34 @@ public class Room
 
         length = Mathf.Abs(tlC_Coord[0] - bRC_Coord[0])+1;
         width = Mathf.Abs(tlC_Coord[1] - bRC_Coord[1])+1;
+    }
+
+    public void SetBlocks(Block tLC, Block bRC, Floor f)
+    {
+        //blocks = b;
+        for (int i = 0; i < blocks.Count; i++)
+        {
+            blocks[i].SetRoomID(id);
+        }
+
+        topLeftCorner = tLC;
+        bottomRightCorner = bRC;
+
+        int[] tlC_Coord = tLC.GetBlockLocation(h);
+        int[] bRC_Coord = bRC.GetBlockLocation(h);
+
+        List<Block> blks = new List<Block>();
+
+        for(int l = tlC_Coord[0]; l <  bRC_Coord[0]; l++)
+        {
+            for (int w = tlC_Coord[1]; w < bRC_Coord[1]; w++)
+            {
+                blks.Add(f.blocks[l,w]);
+            }
+        }
+
+        length = Mathf.Abs(tlC_Coord[0] - bRC_Coord[0]) + 1;
+        width = Mathf.Abs(tlC_Coord[1] - bRC_Coord[1]) + 1;
     }
 
 
@@ -1255,16 +1474,25 @@ public class Block
 
 public class FurnitureBlock{
 
+    public bool isEmpty = true;
     public Furniture furniture;
 
     public FurnitureBlock()
     {
         this.furniture = null;
+        isEmpty = true;
     }
 
     public FurnitureBlock(Furniture f)
     {
         this.furniture = f;
+        isEmpty = false;
+    }
+
+    public void SetFurniture(Furniture f)
+    {
+        this.furniture = f;
+        isEmpty = true;
     }
 
 }

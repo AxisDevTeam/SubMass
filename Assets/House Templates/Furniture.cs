@@ -22,7 +22,7 @@ public class DynamicFurnitureColorInfo{
     public DynamicFurnitureColorInfo()
     {
         this.materialSlot = 0;
-        this.attributeName = "_baseColor";
+        this.attributeName = "_BaseColor";
         this.colorSource = DynamicFurnitureColorSource.random;
     }
     public DynamicFurnitureColorInfo(int materialSlot, DynamicFurnitureColorSource colorSource, string attributeName)

@@ -18,5 +18,5 @@ MonoBehaviour:
   width: 1
   DynamicColorInfo:
   - materialSlot: 0
-    attributeName: _baseColor
+    attributeName: _BaseColor
     colorSource: 2

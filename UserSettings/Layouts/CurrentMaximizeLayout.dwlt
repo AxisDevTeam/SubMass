@@ -19,238 +19,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1920
-    height: 947
-  m_MinSize: {x: 400, y: 200}
+    width: 1440
+    height: 828
+  m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 123
+  controlID: 7372
 --- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 677
-    y: 528
-    width: 800
-    height: 471
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 2560, y: 1440}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -1280
-    m_HBaseRangeMax: 1280
-    m_VBaseRangeMin: -720
-    m_VBaseRangeMax: 720
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 800
-      height: 450
-    m_Scale: {x: 0.3125, y: 0.3125}
-    m_Translation: {x: 400, y: 225}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -1280
-      y: -720
-      width: 2560
-      height: 1440
-    m_MinimalGUI: 1
-  m_defaultScale: 0.3125
-  m_LastWindowPixelSize: {x: 800, y: 471}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 4}
-  - {fileID: 10}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1479
-    height: 947
-  m_MinSize: {x: 300, y: 200}
-  m_MaxSize: {x: 24288, y: 16192}
-  vertical: 1
-  controlID: 124
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 5}
-  - {fileID: 7}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1479
-    height: 455
-  m_MinSize: {x: 200, y: 100}
-  m_MaxSize: {x: 16192, y: 8096}
-  vertical: 0
-  controlID: 125
---- !u!114 &5
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 360
-    height: 455
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 6}
-  m_Panes:
-  - {fileID: 6}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Console
-    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 73
-    width: 359
-    height: 434
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
---- !u!114 &7
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 360
-    y: 0
-    width: 1119
-    height: 455
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 8}
-  m_Panes:
-  - {fileID: 8}
-  - {fileID: 9}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,15 +41,20 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Scene
-    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 360
-    y: 73
-    width: 1117
-    height: 434
+    x: 273
+    y: 52
+    width: 834
+    height: 377
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -284,23 +64,27 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -101, y: -26}
+      snapOffset: {x: -156, y: -26}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
       layout: 1
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 0
       containerId: overlay-toolbar__top
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -141, y: 149}
+      snapOffset: {x: -141, y: -228}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
+      snapCorner: 3
       id: unity-grid-and-snap-toolbar
       index: 1
       layout: 1
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-toolbar__top
       floating: 0
@@ -312,6 +96,8 @@ MonoBehaviour:
       id: unity-scene-view-toolbar
       index: 0
       layout: 1
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-toolbar__top
       floating: 0
@@ -323,6 +109,8 @@ MonoBehaviour:
       id: unity-search-toolbar
       index: 1
       layout: 1
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 0
       containerId: overlay-container--left
       floating: 0
@@ -334,6 +122,21 @@ MonoBehaviour:
       id: unity-transform-toolbar
       index: 0
       layout: 2
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 0
+      containerId: overlay-container--left
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 197}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-component-tools
+      index: 1
+      layout: 2
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 0
       containerId: overlay-container--right
       floating: 0
@@ -345,6 +148,8 @@ MonoBehaviour:
       id: Orientation
       index: 0
       layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-container--right
       floating: 0
@@ -356,6 +161,8 @@ MonoBehaviour:
       id: Scene View/Light Settings
       index: 0
       layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-container--right
       floating: 0
@@ -367,6 +174,8 @@ MonoBehaviour:
       id: Scene View/Camera
       index: 1
       layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-container--right
       floating: 0
@@ -378,6 +187,8 @@ MonoBehaviour:
       id: Scene View/Cloth Constraints
       index: 2
       layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-container--right
       floating: 0
@@ -389,6 +200,8 @@ MonoBehaviour:
       id: Scene View/Cloth Collisions
       index: 3
       layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-container--right
       floating: 0
@@ -400,6 +213,8 @@ MonoBehaviour:
       id: Scene View/Navmesh Display
       index: 4
       layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-container--right
       floating: 0
@@ -411,6 +226,8 @@ MonoBehaviour:
       id: Scene View/Agent Display
       index: 5
       layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-container--right
       floating: 0
@@ -422,6 +239,8 @@ MonoBehaviour:
       id: Scene View/Obstacle Display
       index: 6
       layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-container--right
       floating: 0
@@ -431,8 +250,10 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Occlusion Culling
-      index: 7
+      index: 4
       layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-container--right
       floating: 0
@@ -442,8 +263,10 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Physics Debugger
-      index: 8
+      index: 5
       layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-container--right
       floating: 0
@@ -453,8 +276,10 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Scene Visibility
-      index: 9
+      index: 6
       layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
     - dockPosition: 1
       containerId: overlay-container--right
       floating: 0
@@ -464,8 +289,88 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Particles
+      index: 7
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Tilemap
+      index: 11
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Tilemap Palette Helper
+      index: 12
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: AINavigationOverlay
+      index: 8
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: APV Overlay
+      index: 9
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Cinemachine Tool Settings
       index: 10
       layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/TrailRenderer
+      index: 11
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
@@ -476,9 +381,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 18.841848, y: 34.076492, z: 11.509527}
+    m_Target: {x: 16.525164, y: -25.620123, z: 15.634684}
     speed: 2
-    m_Value: {x: 18.841848, y: 34.076492, z: 11.509527}
+    m_Value: {x: 16.525164, y: -25.611141, z: 15.634684}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -486,7 +391,6 @@ MonoBehaviour:
     section: Shading Mode
   m_ValidateTrueMetals: 0
   m_DoValidateTrueMetals: 0
-  m_ExposureSliderValue: 0
   m_SceneViewState:
     m_AlwaysRefresh: 0
     showFog: 1
@@ -520,22 +424,22 @@ MonoBehaviour:
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 1, y: 1}
+      m_Size: {x: 0, y: 0}
     m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.5891511, y: 0.0000064883757, z: -0.000002012299, w: -0.8080331}
+    m_Target: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
     speed: 2
-    m_Value: {x: -0.58914626, y: 0.0000064883225, z: -0.0000020122825, w: -0.80802643}
+    m_Value: {x: 0.70709884, y: -0.00002912894, z: 0.000012830347, w: 0.70711493}
   m_Size:
-    m_Target: 10
+    m_Target: 24.22371
     speed: 2
-    m_Value: 10
+    m_Value: 24.22371
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -556,7 +460,144 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &9
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 4}
+  - {fileID: 9}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1109
+    height: 828
+  m_MinSize: {x: 300, y: 100}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 1
+  controlID: 7373
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 5}
+  - {fileID: 7}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1109
+    height: 398
+  m_MinSize: {x: 200, y: 50}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 7374
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ConsoleWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 273
+    height: 398
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 6}
+  m_Panes:
+  - {fileID: 6}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 52
+    width: 272
+    height: 377
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 273
+    y: 0
+    width: 836
+    height: 398
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 2}
+  m_Panes:
+  - {fileID: 2}
+  - {fileID: 8}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -572,7 +613,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Audio Mixer
-    m_Image: {fileID: 2344599766593239149, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -3283902137440876849, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -581,6 +622,11 @@ MonoBehaviour:
     y: 73
     width: 1112
     height: 491
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -605,7 +651,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -733,7 +779,7 @@ MonoBehaviour:
   m_ShowReferencedBuses: 1
   m_ShowBusConnections: 0
   m_ShowBusConnectionsOfSelection: 0
---- !u!114 &10
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -746,20 +792,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 11}
-  - {fileID: 13}
-  - {fileID: 15}
+  - {fileID: 10}
+  - {fileID: 12}
+  - {fileID: 14}
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 455
-    width: 1479
-    height: 492
-  m_MinSize: {x: 300, y: 100}
+    y: 398
+    width: 1109
+    height: 430
+  m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 24
---- !u!114 &11
+  controlID: 7272
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -776,16 +822,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 355
-    height: 492
+    width: 266
+    height: 430
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 11}
   m_Panes:
-  - {fileID: 12}
+  - {fileID: 11}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &12
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -801,15 +847,20 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_TitleContent:
     m_Text: Project
-    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 528
-    width: 354
-    height: 471
+    y: 450
+    width: 265
+    height: 409
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -824,25 +875,26 @@ MonoBehaviour:
     m_ReferencingInstanceIDs: 
     m_SceneHandles: 
     m_ShowAllHits: 0
-    m_SkipHidden: 1
+    m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Models/Blocks
+    - Assets/House Templates/HouseTempl1
     m_Globs: []
     m_OriginalText: 
+    m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Models/Blocks
+  - Assets/House Templates/HouseTempl1
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\naren\UnityProjects\HouseGenerator
+  m_LastProjectPath: /Users/naren/Documents/GitHub/SubMass
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8e700000
-    m_LastClickedID: 28814
-    m_ExpandedIDs: 00000000266e0000286e00002a6e0000c66f000000ca9a3bffffff7f
+    m_SelectedIDs: 50760000
+    m_LastClickedID: 30288
+    m_ExpandedIDs: 00000000a87100003a73000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -870,7 +922,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000266e0000286e00002a6e0000
+    m_ExpandedIDs: 00000000a871000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -895,9 +947,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c8faffff
-    m_LastClickedInstanceID: -1336
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 28760000
+    m_LastClickedInstanceID: 30248
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -914,7 +966,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -924,9 +976,9 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
-  m_SkipHiddenPackages: 1
+  m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 124
---- !u!114 &13
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -941,18 +993,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 355
+    x: 266
     y: 0
-    width: 322
-    height: 492
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
+    width: 241
+    height: 430
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 13}
   m_Panes:
-  - {fileID: 14}
+  - {fileID: 13}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &14
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -968,25 +1020,30 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Hierarchy
-    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 355
-    y: 528
-    width: 320
-    height: 471
+    x: 266
+    y: 450
+    width: 239
+    height: 409
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c8faffff
-      m_LastClickedID: -1336
-      m_ExpandedIDs: d6faffffd8faffff
+      scrollPos: {x: 0, y: 64}
+      m_SelectedIDs: 28760000
+      m_LastClickedID: 30248
+      m_ExpandedIDs: 34dcffffd4ddffff98e1ffffd0ebffff54edffffc2f2ffff0afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1002,7 +1059,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 13}
+        m_ClientGUIView: {fileID: 12}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1010,7 +1067,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &15
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1025,21 +1082,119 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 677
+    x: 507
     y: 0
-    width: 802
-    height: 492
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 2}
+    width: 602
+    height: 430
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 2}
+  - {fileID: 15}
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 4
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 507
+    y: 450
+    width: 600
+    height: 409
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 2560, y: 1440}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -640
+    m_HBaseRangeMax: 640
+    m_VBaseRangeMin: -360
+    m_VBaseRangeMax: 360
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 0
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 600
+      height: 388
+    m_Scale: {x: 0.46875, y: 0.46875}
+    m_Translation: {x: 300, y: 194}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -640
+      y: -413.86667
+      width: 1280
+      height: 827.73334
+    m_MinimalGUI: 1
+  m_defaultScale: 0.46875
+  m_LastWindowPixelSize: {x: 1200, y: 818}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1056,15 +1211,20 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Package Manager
-    m_Image: {fileID: -2824328813065806953, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 5076950121296946556, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 677
-    y: 528
+    x: 2597
+    y: 585
     width: 800
-    height: 471
+    height: 534
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1085,7 +1245,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Timeline
-    m_Image: {fileID: -9173288242387172643, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -5401195905404635996, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -1094,6 +1254,11 @@ MonoBehaviour:
     y: 585
     width: 800
     height: 534
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1123,7 +1288,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Animation
-    m_Image: {fileID: -8166618308981325432, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -3237396543322336831, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -1132,13 +1297,18 @@ MonoBehaviour:
     y: 585
     width: 800
     height: 534
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1336
+  m_LastSelectedObjectID: 30248
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1155,7 +1325,7 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Animator
-    m_Image: {fileID: -1673928668082335149, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
@@ -1164,6 +1334,11 @@ MonoBehaviour:
     y: 528
     width: 792
     height: 463
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1200,12 +1375,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1479
+    x: 1109
     y: 0
-    width: 441
-    height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 331
+    height: 828
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -1228,15 +1403,20 @@ MonoBehaviour:
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
     m_Text: Inspector
-    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000,
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1479
-    y: 73
-    width: 440
-    height: 926
+    x: 1109
+    y: 52
+    width: 330
+    height: 807
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1274,10 +1454,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1479
-    y: 73
-    width: 440
-    height: 926
+    x: 1109
+    y: 52
+    width: 330
+    height: 807
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1287,34 +1472,23 @@ MonoBehaviour:
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 0
+  currentStatusEntriesHasUpdate: 1
   repositoryProgressHasUpdate: 1
   appManagerProgressHasUpdate: 1
-  changeTab: 5
-  activeTab: 5
+  changeTab: 6
+  activeTab: 6
   initProjectView:
-    hasCompletedInitialCheck: 1
-    isUserDataPresent: 1
+    hasCompletedInitialCheck: 0
+    isUserDataPresent: 0
     lastCheckUserChangedEvent:
-      updatedTimeString: 2022-11-08T10:02:55.422-08:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 8
   branchesView:
     treeLocals:
       IsRemote: 0
       folders:
-        keys:
-        - Local branches
-        values:
-        - path: Local branches
-          label: Local branches
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -1323,27 +1497,7 @@ MonoBehaviour:
       displayRootNode: 1
       isSelectable: 1
       isCheckable: 0
-      nodes:
-      - path: Local branches
-        label: Local branches
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
-      - path: master
-        label: master
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 1
-        treeIsCheckable: 0
-        checkState: 0
+      nodes: []
       selectedNode:
         path: 
         label: 
@@ -1358,19 +1512,8 @@ MonoBehaviour:
     treeRemotes:
       IsRemote: 1
       folders:
-        keys:
-        - Remote branches
-        values:
-        - path: Remote branches
-          label: Remote branches
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 0
-          checkState: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -1379,22 +1522,12 @@ MonoBehaviour:
       displayRootNode: 1
       isSelectable: 1
       isCheckable: 0
-      nodes:
-      - path: Remote branches
-        label: Remote branches
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 0
-        checkState: 0
+      nodes: []
       selectedNode:
-        path: Remote branches
-        label: Remote branches
+        path: 
+        label: 
         level: 0
-        isFolder: 1
+        isFolder: 0
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
@@ -1404,16 +1537,16 @@ MonoBehaviour:
     mode: 0
     newBranchName: 
     scroll: {x: 0, y: 0}
-    disableDelete: 1
-    disableCreate: 1
+    disableDelete: 0
+    disableCreate: 0
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 2022-11-08T10:31:51.046-08:00
-      cacheType: 2
+      updatedTimeString: 
+      cacheType: 0
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 2022-11-08T10:03:05.242-08:00
-      cacheType: 1
+      updatedTimeString: 
+      cacheType: 0
     currentBranch:
-      name: master
+      name: 
       tracking: 
     currentRemote:
       name: 
@@ -1423,9 +1556,7 @@ MonoBehaviour:
       host: 
       function: 0
       token: 
-    localBranches:
-    - name: master
-      tracking: 
+    localBranches: []
     remoteBranches: []
   changesView:
     currentBranchHasUpdate: 0
@@ -1434,7 +1565,7 @@ MonoBehaviour:
     commitBody: 
     commitMessage: 
     currentBranch: master
-    treeScroll: {x: 0, y: 0}
+    treeScroll: {x: 0, y: 476}
     treeChanges:
       assets:
         keys: []
@@ -1446,7 +1577,7 @@ MonoBehaviour:
         keys: []
         values: []
       title: 
-      pathSeparator: \
+      pathSeparator: /
       displayRootNode: 0
       isSelectable: 1
       isCheckable: 1
@@ -1492,18 +1623,1277 @@ MonoBehaviour:
     gitStatusEntries: []
     changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2022-11-08T10:03:05.242-08:00
+      updatedTimeString: 2023-02-27T12:06:31.359-08:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2022-11-08T10:31:51.546-08:00
+      updatedTimeString: 2023-02-27T12:06:31.551-08:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2023-02-27T12:06:31.768-08:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
+    - commitID: 2ca22a24795be1283e0eb8e5750a37a297cc5d29
+      mergeA: 
+      mergeB: 
+      authorName: ActualTomato
+      authorEmail: narenragu@icloud.com
+      commitEmail: narenragu@icloud.com
+      commitName: ActualTomato
+      summary: door gen fix, consolidated block types
+      description: 'doors generate on all valid walls and then on each wall all doors
+        are removed but one
+
+
+
+        doors do not generate on outside of house
+        including the walls next to the removed rooms
+
+
+
+        there are only 4
+        block types now, wall, floor, corner and door
+
+
+
+        block types change
+        by rotating transform instead of having a different model for each rotation'
+      timeString: 2022-12-09T14:48:51.000-08:00
+      commitTimeString: 2022-12-09T14:48:51.000-08:00
+      changes:
+      - path: Assets\HouseConstructor.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+        projectPath: Assets\HouseConstructor.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\TimelineSettings.asset
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\ProjectSettings\TimelineSettings.asset
+        projectPath: ProjectSettings\TimelineSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 307d4abd178ed92f9ae58ec86528119117594cdb
+      mergeA: 
+      mergeB: 
+      authorName: ActualTomato
+      authorEmail: narenragu@icloud.com
+      commitEmail: narenragu@icloud.com
+      commitName: ActualTomato
+      summary: house setup script
+      description: 
+      timeString: 2022-12-09T10:32:39.000-08:00
+      commitTimeString: 2022-12-09T10:32:39.000-08:00
+      changes:
+      - path: Assets\HouseConstructor.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+        projectPath: Assets\HouseConstructor.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\HouseSetup.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseSetup.cs
+        projectPath: Assets\HouseSetup.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\HouseSetup.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseSetup.cs.meta
+        projectPath: Assets\HouseSetup.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 51930d276deb727a3788cd90a463e0eea1114ba6
+      mergeA: 
+      mergeB: 
+      authorName: ActualTomato
+      authorEmail: narenragu@icloud.com
+      commitEmail: narenragu@icloud.com
+      commitName: ActualTomato
+      summary: add house builder to player scene
+      description: 
+      timeString: 2022-12-08T00:37:02.000-08:00
+      commitTimeString: 2022-12-08T00:37:02.000-08:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 69803a57d6d40f25f9080a20804ca12cf5f9f3a8
+      mergeA: 
+      mergeB: 
+      authorName: ActualTomato
+      authorEmail: narenragu@icloud.com
+      commitEmail: narenragu@icloud.com
+      commitName: ActualTomato
+      summary: consolidate character to prefab
+      description: 
+      timeString: 2022-12-07T23:33:30.000-08:00
+      commitTimeString: 2022-12-07T23:33:30.000-08:00
+      changes:
+      - path: Assets\HeadMovement.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HeadMovement.cs
+        projectPath: Assets\HeadMovement.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\HeadMovement.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HeadMovement.cs.meta
+        projectPath: Assets\HeadMovement.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Character.mat
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Character.mat
+        projectPath: Assets\Models\Character.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Character.mat.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Character.mat.meta
+        projectPath: Assets\Models\Character.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\PlayerCapsule.prefab
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\PlayerCapsule.prefab
+        projectPath: Assets\Models\PlayerCapsule.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\PlayerCapsule.prefab.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\PlayerCapsule.prefab.meta
+        projectPath: Assets\Models\PlayerCapsule.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs
+        projectPath: Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 86d0a13a769e80a912f7ef991b5257f8146dbbfa
+      mergeA: 
+      mergeB: 
+      authorName: ActualTomato
+      authorEmail: narenragu@icloud.com
+      commitEmail: narenragu@icloud.com
+      commitName: ActualTomato
+      summary: character controller
+      description: add CC using unity starter assets, modified values to fit project
+      timeString: 2022-11-28T00:09:54.000-08:00
+      commitTimeString: 2022-11-28T00:09:54.000-08:00
+      changes:
+      - path: Assets\HouseConstructor.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+        projectPath: Assets\HouseConstructor.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\EBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\EBlock.blend.meta
+        projectPath: Assets\Models\Blocks\EBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\Floor.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\Floor.blend
+        projectPath: Assets\Models\Blocks\Floor.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\Floor.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\Floor.blend.meta
+        projectPath: Assets\Models\Blocks\Floor.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\Floor.blend1
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\Floor.blend1
+        projectPath: Assets\Models\Blocks\Floor.blend1
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\Floor.blend1.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\Floor.blend1.meta
+        projectPath: Assets\Models\Blocks\Floor.blend1.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\NBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NBlock.blend.meta
+        projectPath: Assets\Models\Blocks\NBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\NEBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NEBlock.blend.meta
+        projectPath: Assets\Models\Blocks\NEBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\NWBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NWBlock.blend.meta
+        projectPath: Assets\Models\Blocks\NWBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\New Material.mat
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\New
+          Material.mat
+        projectPath: Assets\Models\Blocks\New Material.mat
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\SBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SBlock.blend.meta
+        projectPath: Assets\Models\Blocks\SBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\SEBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SEBlock.blend.meta
+        projectPath: Assets\Models\Blocks\SEBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\SWBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SWBlock.blend.meta
+        projectPath: Assets\Models\Blocks\SWBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\WBlock.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend
+        projectPath: Assets\Models\Blocks\WBlock.blend
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\WBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend.meta
+        projectPath: Assets\Models\Blocks\WBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\WBlock.blend1
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend1
+        projectPath: Assets\Models\Blocks\WBlock.blend1
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\WBlock.blend1.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend1.meta
+        projectPath: Assets\Models\Blocks\WBlock.blend1.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Movement.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Movement.cs
+        projectPath: Assets\Movement.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Movement.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Movement.cs.meta
+        projectPath: Assets\Movement.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Settings\New Controls.inputactions
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Settings\New
+          Controls.inputactions
+        projectPath: Assets\Settings\New Controls.inputactions
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\New Controls.inputactions.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Settings\New
+          Controls.inputactions.meta
+        projectPath: Assets\Settings\New Controls.inputactions.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets.meta
+        projectPath: Assets\StarterAssets.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Editor.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor.meta
+        projectPath: Assets\StarterAssets\Editor.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs
+        projectPath: Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs.meta
+        projectPath: Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Editor\PackageChecker.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\PackageChecker.meta
+        projectPath: Assets\StarterAssets\Editor\PackageChecker.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Editor\PackageChecker\PackageCheckerSettings.json
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\PackageChecker\PackageCheckerSettings.json
+        projectPath: Assets\StarterAssets\Editor\PackageChecker\PackageCheckerSettings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Editor\PackageChecker\PackageCheckerSettings.json.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\PackageChecker\PackageCheckerSettings.json.meta
+        projectPath: Assets\StarterAssets\Editor\PackageChecker\PackageCheckerSettings.json.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll
+        projectPath: Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll.meta
+        projectPath: Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs
+        projectPath: Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs.meta
+        projectPath: Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController.meta
+        projectPath: Assets\StarterAssets\FirstPersonController.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Prefabs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs.meta
+        projectPath: Assets\StarterAssets\FirstPersonController\Prefabs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Prefabs\MainCamera.prefab
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\MainCamera.prefab
+        projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\MainCamera.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Prefabs\MainCamera.prefab.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\MainCamera.prefab.meta
+        projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\MainCamera.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Prefabs\NestedParent_Unpack.prefab
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\NestedParent_Unpack.prefab
+        projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\NestedParent_Unpack.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Prefabs\NestedParent_Unpack.prefab.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\NestedParent_Unpack.prefab.meta
+        projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\NestedParent_Unpack.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerCapsule.prefab
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\PlayerCapsule.prefab
+        projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerCapsule.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerCapsule.prefab.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\PlayerCapsule.prefab.meta
+        projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerCapsule.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerFollowCamera.prefab
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\PlayerFollowCamera.prefab
+        projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerFollowCamera.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerFollowCamera.prefab.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\PlayerFollowCamera.prefab.meta
+        projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerFollowCamera.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Scripts.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Scripts.meta
+        projectPath: Assets\StarterAssets\FirstPersonController\Scripts.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs
+        projectPath: Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs.meta
+        projectPath: Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs
+        projectPath: Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs.meta
+        projectPath: Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\InputSystem.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem.meta
+        projectPath: Assets\StarterAssets\InputSystem.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\InputSystem\StarterAssets.inputactions
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem\StarterAssets.inputactions
+        projectPath: Assets\StarterAssets\InputSystem\StarterAssets.inputactions
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\InputSystem\StarterAssets.inputactions.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem\StarterAssets.inputactions.meta
+        projectPath: Assets\StarterAssets\InputSystem\StarterAssets.inputactions.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\InputSystem\StarterAssets.inputsettings.asset
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem\StarterAssets.inputsettings.asset
+        projectPath: Assets\StarterAssets\InputSystem\StarterAssets.inputsettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\InputSystem\StarterAssets.inputsettings.asset.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem\StarterAssets.inputsettings.asset.meta
+        projectPath: Assets\StarterAssets\InputSystem\StarterAssets.inputsettings.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs
+        projectPath: Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs.meta
+        projectPath: Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile.meta
+        projectPath: Assets\StarterAssets\Mobile.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs.meta
+        projectPath: Assets\StarterAssets\Mobile\Prefabs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\CanvasInputs.meta
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_Joysticks.prefab
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_Joysticks.prefab
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_Joysticks.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_Joysticks.prefab.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_Joysticks.prefab.meta
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_Joysticks.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_TouchZones.prefab
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_TouchZones.prefab
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_TouchZones.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_TouchZones.prefab.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_TouchZones.prefab.meta
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_TouchZones.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\EventSystem.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\EventSystem.meta
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\EventSystem.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\EventSystem\UI_EventSystem.prefab
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\EventSystem\UI_EventSystem.prefab
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\EventSystem\UI_EventSystem.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\EventSystem\UI_EventSystem.prefab.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\EventSystem\UI_EventSystem.prefab.meta
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\EventSystem\UI_EventSystem.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs.meta
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Button.prefab
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Button.prefab
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Button.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Button.prefab.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Button.prefab.meta
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Button.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Joystick.prefab
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Joystick.prefab
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Joystick.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Joystick.prefab.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Joystick.prefab.meta
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Joystick.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_TouchZone.prefab
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_TouchZone.prefab
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_TouchZone.prefab
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_TouchZone.prefab.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_TouchZone.prefab.meta
+        projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_TouchZone.prefab.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts.meta
+        projectPath: Assets\StarterAssets\Mobile\Scripts.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\CanvasInputs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\CanvasInputs.meta
+        projectPath: Assets\StarterAssets\Mobile\Scripts\CanvasInputs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs
+        projectPath: Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs.meta
+        projectPath: Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\Utilities.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\Utilities.meta
+        projectPath: Assets\StarterAssets\Mobile\Scripts\Utilities.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs
+        projectPath: Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs.meta
+        projectPath: Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs.meta
+        projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs
+        projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs.meta
+        projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs
+        projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs.meta
+        projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs
+        projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs.meta
+        projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI.meta
+        projectPath: Assets\StarterAssets\Mobile\UI.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI\UI_Circle_Bevel_Base.png
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Circle_Bevel_Base.png
+        projectPath: Assets\StarterAssets\Mobile\UI\UI_Circle_Bevel_Base.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI\UI_Circle_Bevel_Base.png.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Circle_Bevel_Base.png.meta
+        projectPath: Assets\StarterAssets\Mobile\UI\UI_Circle_Bevel_Base.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI\UI_Circle_Faded.png
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Circle_Faded.png
+        projectPath: Assets\StarterAssets\Mobile\UI\UI_Circle_Faded.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI\UI_Circle_Faded.png.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Circle_Faded.png.meta
+        projectPath: Assets\StarterAssets\Mobile\UI\UI_Circle_Faded.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Jump.png
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Jump.png
+        projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Jump.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Jump.png.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Jump.png.meta
+        projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Jump.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Look.png
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Look.png
+        projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Look.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Look.png.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Look.png.meta
+        projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Look.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Move.png
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Move.png
+        projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Move.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Move.png.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Move.png.meta
+        projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Move.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Sprint.png
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Sprint.png
+        projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Sprint.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Sprint.png.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Sprint.png.meta
+        projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Sprint.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Readme.asset
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Readme.asset
+        projectPath: Assets\StarterAssets\Readme.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\Readme.asset.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Readme.asset.meta
+        projectPath: Assets\StarterAssets\Readme.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\StarterAssets_Documentation_v1.1.pdf
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\StarterAssets_Documentation_v1.1.pdf
+        projectPath: Assets\StarterAssets\StarterAssets_Documentation_v1.1.pdf
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\StarterAssets_Documentation_v1.1.pdf.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\StarterAssets_Documentation_v1.1.pdf.meta
+        projectPath: Assets\StarterAssets\StarterAssets_Documentation_v1.1.pdf.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\TutorialInfo.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\TutorialInfo.meta
+        projectPath: Assets\StarterAssets\TutorialInfo.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\TutorialInfo\Icons.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\TutorialInfo\Icons.meta
+        projectPath: Assets\StarterAssets\TutorialInfo\Icons.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\TutorialInfo\Icons\ReadMeImg.PNG
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\TutorialInfo\Icons\ReadMeImg.PNG
+        projectPath: Assets\StarterAssets\TutorialInfo\Icons\ReadMeImg.PNG
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\TutorialInfo\Icons\ReadMeImg.PNG.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\TutorialInfo\Icons\ReadMeImg.PNG.meta
+        projectPath: Assets\StarterAssets\TutorialInfo\Icons\ReadMeImg.PNG.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\license.txt
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\license.txt
+        projectPath: Assets\StarterAssets\license.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StarterAssets\license.txt.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\license.txt.meta
+        projectPath: Assets\StarterAssets\license.txt.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs
+        projectPath: Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Scripts\Readme.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\TutorialInfo\Scripts\Readme.cs
+        projectPath: Assets\TutorialInfo\Scripts\Readme.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Scripts\Readme.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\TutorialInfo\Scripts\Readme.cs.meta
+        projectPath: Assets\TutorialInfo\Scripts\Readme.cs.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Packages\manifest.json
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Packages\manifest.json
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\ProjectSettings\ProjectSettings.asset
+        projectPath: ProjectSettings\ProjectSettings.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\UserSettings\Layouts\default-2021.dwlt
+        projectPath: UserSettings\Layouts\default-2021.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: bfe62c39916e0844a34387bc34b83de07e801756
+      mergeA: 
+      mergeB: 
+      authorName: ActualTomato
+      authorEmail: narenragu@icloud.com
+      commitEmail: narenragu@icloud.com
+      commitName: ActualTomato
+      summary: added basic door placement
+      description: not all rooms are connecting currently, but a single door is randomly
+        being placed in every room
+      timeString: 2022-11-11T00:47:30.000-08:00
+      commitTimeString: 2022-11-11T00:47:30.000-08:00
+      changes:
+      - path: Assets\HouseConstructor.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+        projectPath: Assets\HouseConstructor.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\EBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\EBlock.blend.meta
+        projectPath: Assets\Models\Blocks\EBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\NBlock.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NBlock.blend
+        projectPath: Assets\Models\Blocks\NBlock.blend
+        originalPath: Assets\Models\Blocks\S_NBlock.blend
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\NBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NBlock.blend.meta
+        projectPath: Assets\Models\Blocks\NBlock.blend.meta
+        originalPath: Assets\Models\Blocks\S_NBlock.blend.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\NEBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NEBlock.blend.meta
+        projectPath: Assets\Models\Blocks\NEBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\NWBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NWBlock.blend.meta
+        projectPath: Assets\Models\Blocks\NWBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\SBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SBlock.blend.meta
+        projectPath: Assets\Models\Blocks\SBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\SEBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SEBlock.blend.meta
+        projectPath: Assets\Models\Blocks\SEBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\SWBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SWBlock.blend.meta
+        projectPath: Assets\Models\Blocks\SWBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\WBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend.meta
+        projectPath: Assets\Models\Blocks\WBlock.blend.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 6b2ad3ed7f26920a5bc5a457bcb8e1dd3b4e81ad
+      mergeA: 
+      mergeB: 
+      authorName: ActualTomato
+      authorEmail: narenragu@icloud.com
+      commitEmail: narenragu@icloud.com
+      commitName: ActualTomato
+      summary: working basic floor plan!
+      description: the basic floor plan generation finally works! need to add doors,
+        removed walls, edges, windows etc.
+      timeString: 2022-11-09T23:47:14.000-08:00
+      commitTimeString: 2022-11-09T23:47:14.000-08:00
+      changes:
+      - path: Assets\HouseConstructor.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+        projectPath: Assets\HouseConstructor.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks.meta
+        projectPath: Assets\Models\Blocks.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\EBlock.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\EBlock.blend
+        projectPath: Assets\Models\Blocks\EBlock.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\EBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\EBlock.blend.meta
+        projectPath: Assets\Models\Blocks\EBlock.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\NEBlock.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NEBlock.blend
+        projectPath: Assets\Models\Blocks\NEBlock.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\NEBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NEBlock.blend.meta
+        projectPath: Assets\Models\Blocks\NEBlock.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\NWBlock.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NWBlock.blend
+        projectPath: Assets\Models\Blocks\NWBlock.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\NWBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NWBlock.blend.meta
+        projectPath: Assets\Models\Blocks\NWBlock.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\New Material.mat
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\New
+          Material.mat
+        projectPath: Assets\Models\Blocks\New Material.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\New Material.mat.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\New
+          Material.mat.meta
+        projectPath: Assets\Models\Blocks\New Material.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\SBlock.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SBlock.blend
+        projectPath: Assets\Models\Blocks\SBlock.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\SBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SBlock.blend.meta
+        projectPath: Assets\Models\Blocks\SBlock.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\SEBlock.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SEBlock.blend
+        projectPath: Assets\Models\Blocks\SEBlock.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\SEBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SEBlock.blend.meta
+        projectPath: Assets\Models\Blocks\SEBlock.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\SWBlock.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SWBlock.blend
+        projectPath: Assets\Models\Blocks\SWBlock.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\SWBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SWBlock.blend.meta
+        projectPath: Assets\Models\Blocks\SWBlock.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\S_NBlock.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\S_NBlock.blend
+        projectPath: Assets\Models\Blocks\S_NBlock.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\S_NBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\S_NBlock.blend.meta
+        projectPath: Assets\Models\Blocks\S_NBlock.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\WBlock.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend
+        projectPath: Assets\Models\Blocks\WBlock.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\Blocks\WBlock.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend.meta
+        projectPath: Assets\Models\Blocks\WBlock.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 89fbf8301414ace3195555015066cc2c6563168e
+      mergeA: 
+      mergeB: 
+      authorName: ActualTomato
+      authorEmail: 73549035+ActualTomato@users.noreply.github.com
+      commitEmail: 73549035+ActualTomato@users.noreply.github.com
+      commitName: ActualTomato
+      summary: floor plan 3d build prototype
+      description: blocks are placed correctly but incorrectly aligned
+      timeString: 2022-11-09T13:57:45.000-08:00
+      commitTimeString: 2022-11-09T13:57:45.000-08:00
+      changes:
+      - path: .DS_Store
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\.DS_Store
+        projectPath: .DS_Store
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\HouseConstructor.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+        projectPath: Assets\HouseConstructor.cs
+        originalPath: Assets\HouseConstructor2.cs
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\HouseConstructor.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs.meta
+        projectPath: Assets\HouseConstructor.cs.meta
+        originalPath: Assets\HouseConstructor2.cs.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Models.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models.meta
+        projectPath: Assets\Models.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\CornerNE.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerNE.blend
+        projectPath: Assets\Models\CornerNE.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\CornerNE.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerNE.blend.meta
+        projectPath: Assets\Models\CornerNE.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\CornerNW.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerNW.blend
+        projectPath: Assets\Models\CornerNW.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\CornerNW.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerNW.blend.meta
+        projectPath: Assets\Models\CornerNW.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\CornerSE.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerSE.blend
+        projectPath: Assets\Models\CornerSE.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\CornerSE.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerSE.blend.meta
+        projectPath: Assets\Models\CornerSE.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\CornerSW.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerSW.blend
+        projectPath: Assets\Models\CornerSW.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\CornerSW.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerSW.blend.meta
+        projectPath: Assets\Models\CornerSW.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\WallE.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallE.blend
+        projectPath: Assets\Models\WallE.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\WallE.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallE.blend.meta
+        projectPath: Assets\Models\WallE.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\WallN.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallN.blend
+        projectPath: Assets\Models\WallN.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\WallN.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallN.blend.meta
+        projectPath: Assets\Models\WallN.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\WallS.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallS.blend
+        projectPath: Assets\Models\WallS.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\WallS.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallS.blend.meta
+        projectPath: Assets\Models\WallS.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\WallW.blend
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallW.blend
+        projectPath: Assets\Models\WallW.blend
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Models\WallW.blend.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallW.blend.meta
+        projectPath: Assets\Models\WallW.blend.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 963819060de93dd1965f120048cc65bf9084e2a5
+      mergeA: 
+      mergeB: 
+      authorName: ActualTomato
+      authorEmail: narenragu@icloud.com
+      commitEmail: narenragu@icloud.com
+      commitName: ActualTomato
+      summary: fixed room generation!
+      description: rooms now split vertically and horizontally without any problems
+      timeString: 2022-11-09T08:47:02.000-08:00
+      commitTimeString: 2022-11-09T08:47:02.000-08:00
+      changes:
+      - path: Assets\HouseConstructor.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+        projectPath: Assets\HouseConstructor.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\HouseConstructor.cs.meta
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs.meta
+        projectPath: Assets\HouseConstructor.cs.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\HouseConstructor2.cs
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor2.cs
+        projectPath: Assets\HouseConstructor2.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-2021.dwlt
+        fullPath: C:\Users\naren\UnityProjects\HouseGenerator\UserSettings\Layouts\default-2021.dwlt
+        projectPath: UserSettings\Layouts\default-2021.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
     - commitID: c2b19eacd2ed0d7cc91734b2fc92cb412c10e693
       mergeA: 
       mergeB: 
@@ -1975,14 +3365,1274 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2022-11-08T10:31:51.581-08:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2022-11-08T10:31:51.575-08:00
+      updatedTimeString: 2022-12-29T19:24:41.598-08:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: 2ca22a24795be1283e0eb8e5750a37a297cc5d29
+        mergeA: 
+        mergeB: 
+        authorName: ActualTomato
+        authorEmail: narenragu@icloud.com
+        commitEmail: narenragu@icloud.com
+        commitName: ActualTomato
+        summary: door gen fix, consolidated block types
+        description: 'doors generate on all valid walls and then on each wall all
+          doors are removed but one
+
+
+
+          doors do not generate on outside
+          of house including the walls next to the removed rooms
+
+
+
+          there
+          are only 4 block types now, wall, floor, corner and door
+
+
+
+          block
+          types change by rotating transform instead of having a different model
+          for each rotation'
+        timeString: 2022-12-09T14:48:51.000-08:00
+        commitTimeString: 2022-12-09T14:48:51.000-08:00
+        changes:
+        - path: Assets\HouseConstructor.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+          projectPath: Assets\HouseConstructor.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings\TimelineSettings.asset
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\ProjectSettings\TimelineSettings.asset
+          projectPath: ProjectSettings\TimelineSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 307d4abd178ed92f9ae58ec86528119117594cdb
+        mergeA: 
+        mergeB: 
+        authorName: ActualTomato
+        authorEmail: narenragu@icloud.com
+        commitEmail: narenragu@icloud.com
+        commitName: ActualTomato
+        summary: house setup script
+        description: 
+        timeString: 2022-12-09T10:32:39.000-08:00
+        commitTimeString: 2022-12-09T10:32:39.000-08:00
+        changes:
+        - path: Assets\HouseConstructor.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+          projectPath: Assets\HouseConstructor.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\HouseSetup.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseSetup.cs
+          projectPath: Assets\HouseSetup.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\HouseSetup.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseSetup.cs.meta
+          projectPath: Assets\HouseSetup.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 51930d276deb727a3788cd90a463e0eea1114ba6
+        mergeA: 
+        mergeB: 
+        authorName: ActualTomato
+        authorEmail: narenragu@icloud.com
+        commitEmail: narenragu@icloud.com
+        commitName: ActualTomato
+        summary: add house builder to player scene
+        description: 
+        timeString: 2022-12-08T00:37:02.000-08:00
+        commitTimeString: 2022-12-08T00:37:02.000-08:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 69803a57d6d40f25f9080a20804ca12cf5f9f3a8
+        mergeA: 
+        mergeB: 
+        authorName: ActualTomato
+        authorEmail: narenragu@icloud.com
+        commitEmail: narenragu@icloud.com
+        commitName: ActualTomato
+        summary: consolidate character to prefab
+        description: 
+        timeString: 2022-12-07T23:33:30.000-08:00
+        commitTimeString: 2022-12-07T23:33:30.000-08:00
+        changes:
+        - path: Assets\HeadMovement.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HeadMovement.cs
+          projectPath: Assets\HeadMovement.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\HeadMovement.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HeadMovement.cs.meta
+          projectPath: Assets\HeadMovement.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Character.mat
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Character.mat
+          projectPath: Assets\Models\Character.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Character.mat.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Character.mat.meta
+          projectPath: Assets\Models\Character.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\PlayerCapsule.prefab
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\PlayerCapsule.prefab
+          projectPath: Assets\Models\PlayerCapsule.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\PlayerCapsule.prefab.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\PlayerCapsule.prefab.meta
+          projectPath: Assets\Models\PlayerCapsule.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs
+          projectPath: Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 86d0a13a769e80a912f7ef991b5257f8146dbbfa
+        mergeA: 
+        mergeB: 
+        authorName: ActualTomato
+        authorEmail: narenragu@icloud.com
+        commitEmail: narenragu@icloud.com
+        commitName: ActualTomato
+        summary: character controller
+        description: add CC using unity starter assets, modified values to fit project
+        timeString: 2022-11-28T00:09:54.000-08:00
+        commitTimeString: 2022-11-28T00:09:54.000-08:00
+        changes:
+        - path: Assets\HouseConstructor.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+          projectPath: Assets\HouseConstructor.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\EBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\EBlock.blend.meta
+          projectPath: Assets\Models\Blocks\EBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\Floor.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\Floor.blend
+          projectPath: Assets\Models\Blocks\Floor.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\Floor.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\Floor.blend.meta
+          projectPath: Assets\Models\Blocks\Floor.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\Floor.blend1
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\Floor.blend1
+          projectPath: Assets\Models\Blocks\Floor.blend1
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\Floor.blend1.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\Floor.blend1.meta
+          projectPath: Assets\Models\Blocks\Floor.blend1.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\NBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NBlock.blend.meta
+          projectPath: Assets\Models\Blocks\NBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\NEBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NEBlock.blend.meta
+          projectPath: Assets\Models\Blocks\NEBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\NWBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NWBlock.blend.meta
+          projectPath: Assets\Models\Blocks\NWBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\New Material.mat
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\New
+            Material.mat
+          projectPath: Assets\Models\Blocks\New Material.mat
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\SBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SBlock.blend.meta
+          projectPath: Assets\Models\Blocks\SBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\SEBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SEBlock.blend.meta
+          projectPath: Assets\Models\Blocks\SEBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\SWBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SWBlock.blend.meta
+          projectPath: Assets\Models\Blocks\SWBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\WBlock.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend
+          projectPath: Assets\Models\Blocks\WBlock.blend
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\WBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend.meta
+          projectPath: Assets\Models\Blocks\WBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\WBlock.blend1
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend1
+          projectPath: Assets\Models\Blocks\WBlock.blend1
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\WBlock.blend1.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend1.meta
+          projectPath: Assets\Models\Blocks\WBlock.blend1.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Movement.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Movement.cs
+          projectPath: Assets\Movement.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Movement.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Movement.cs.meta
+          projectPath: Assets\Movement.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Settings\New Controls.inputactions
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Settings\New
+            Controls.inputactions
+          projectPath: Assets\Settings\New Controls.inputactions
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\New Controls.inputactions.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Settings\New
+            Controls.inputactions.meta
+          projectPath: Assets\Settings\New Controls.inputactions.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets.meta
+          projectPath: Assets\StarterAssets.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Editor.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor.meta
+          projectPath: Assets\StarterAssets\Editor.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs
+          projectPath: Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs.meta
+          projectPath: Assets\StarterAssets\Editor\FirstPersonStarterAssetsDeployMenu.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Editor\PackageChecker.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\PackageChecker.meta
+          projectPath: Assets\StarterAssets\Editor\PackageChecker.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Editor\PackageChecker\PackageCheckerSettings.json
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\PackageChecker\PackageCheckerSettings.json
+          projectPath: Assets\StarterAssets\Editor\PackageChecker\PackageCheckerSettings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Editor\PackageChecker\PackageCheckerSettings.json.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\PackageChecker\PackageCheckerSettings.json.meta
+          projectPath: Assets\StarterAssets\Editor\PackageChecker\PackageCheckerSettings.json.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll
+          projectPath: Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll.meta
+          projectPath: Assets\StarterAssets\Editor\PackageChecker\StarterAssetsPackageChecker.dll.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs
+          projectPath: Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs.meta
+          projectPath: Assets\StarterAssets\Editor\StarterAssetsDeployMenu.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController.meta
+          projectPath: Assets\StarterAssets\FirstPersonController.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Prefabs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs.meta
+          projectPath: Assets\StarterAssets\FirstPersonController\Prefabs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Prefabs\MainCamera.prefab
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\MainCamera.prefab
+          projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\MainCamera.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Prefabs\MainCamera.prefab.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\MainCamera.prefab.meta
+          projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\MainCamera.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Prefabs\NestedParent_Unpack.prefab
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\NestedParent_Unpack.prefab
+          projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\NestedParent_Unpack.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Prefabs\NestedParent_Unpack.prefab.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\NestedParent_Unpack.prefab.meta
+          projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\NestedParent_Unpack.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerCapsule.prefab
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\PlayerCapsule.prefab
+          projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerCapsule.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerCapsule.prefab.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\PlayerCapsule.prefab.meta
+          projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerCapsule.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerFollowCamera.prefab
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\PlayerFollowCamera.prefab
+          projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerFollowCamera.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerFollowCamera.prefab.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Prefabs\PlayerFollowCamera.prefab.meta
+          projectPath: Assets\StarterAssets\FirstPersonController\Prefabs\PlayerFollowCamera.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Scripts.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Scripts.meta
+          projectPath: Assets\StarterAssets\FirstPersonController\Scripts.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs
+          projectPath: Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs.meta
+          projectPath: Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs
+          projectPath: Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs.meta
+          projectPath: Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\InputSystem.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem.meta
+          projectPath: Assets\StarterAssets\InputSystem.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\InputSystem\StarterAssets.inputactions
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem\StarterAssets.inputactions
+          projectPath: Assets\StarterAssets\InputSystem\StarterAssets.inputactions
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\InputSystem\StarterAssets.inputactions.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem\StarterAssets.inputactions.meta
+          projectPath: Assets\StarterAssets\InputSystem\StarterAssets.inputactions.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\InputSystem\StarterAssets.inputsettings.asset
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem\StarterAssets.inputsettings.asset
+          projectPath: Assets\StarterAssets\InputSystem\StarterAssets.inputsettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\InputSystem\StarterAssets.inputsettings.asset.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem\StarterAssets.inputsettings.asset.meta
+          projectPath: Assets\StarterAssets\InputSystem\StarterAssets.inputsettings.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs
+          projectPath: Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs.meta
+          projectPath: Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile.meta
+          projectPath: Assets\StarterAssets\Mobile.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs.meta
+          projectPath: Assets\StarterAssets\Mobile\Prefabs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\CanvasInputs.meta
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_Joysticks.prefab
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_Joysticks.prefab
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_Joysticks.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_Joysticks.prefab.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_Joysticks.prefab.meta
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_Joysticks.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_TouchZones.prefab
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_TouchZones.prefab
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_TouchZones.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_TouchZones.prefab.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_TouchZones.prefab.meta
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\CanvasInputs\UI_Canvas_StarterAssetsInputs_TouchZones.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\EventSystem.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\EventSystem.meta
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\EventSystem.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\EventSystem\UI_EventSystem.prefab
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\EventSystem\UI_EventSystem.prefab
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\EventSystem\UI_EventSystem.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\EventSystem\UI_EventSystem.prefab.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\EventSystem\UI_EventSystem.prefab.meta
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\EventSystem\UI_EventSystem.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs.meta
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Button.prefab
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Button.prefab
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Button.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Button.prefab.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Button.prefab.meta
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Button.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Joystick.prefab
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Joystick.prefab
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Joystick.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Joystick.prefab.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Joystick.prefab.meta
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_Joystick.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_TouchZone.prefab
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_TouchZone.prefab
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_TouchZone.prefab
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_TouchZone.prefab.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_TouchZone.prefab.meta
+          projectPath: Assets\StarterAssets\Mobile\Prefabs\VirtualInputs\UI_Virtual_TouchZone.prefab.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts.meta
+          projectPath: Assets\StarterAssets\Mobile\Scripts.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\CanvasInputs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\CanvasInputs.meta
+          projectPath: Assets\StarterAssets\Mobile\Scripts\CanvasInputs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs
+          projectPath: Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs.meta
+          projectPath: Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\Utilities.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\Utilities.meta
+          projectPath: Assets\StarterAssets\Mobile\Scripts\Utilities.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs
+          projectPath: Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs.meta
+          projectPath: Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs.meta
+          projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs
+          projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs.meta
+          projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs
+          projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs.meta
+          projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs
+          projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs.meta
+          projectPath: Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI.meta
+          projectPath: Assets\StarterAssets\Mobile\UI.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI\UI_Circle_Bevel_Base.png
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Circle_Bevel_Base.png
+          projectPath: Assets\StarterAssets\Mobile\UI\UI_Circle_Bevel_Base.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI\UI_Circle_Bevel_Base.png.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Circle_Bevel_Base.png.meta
+          projectPath: Assets\StarterAssets\Mobile\UI\UI_Circle_Bevel_Base.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI\UI_Circle_Faded.png
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Circle_Faded.png
+          projectPath: Assets\StarterAssets\Mobile\UI\UI_Circle_Faded.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI\UI_Circle_Faded.png.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Circle_Faded.png.meta
+          projectPath: Assets\StarterAssets\Mobile\UI\UI_Circle_Faded.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Jump.png
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Jump.png
+          projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Jump.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Jump.png.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Jump.png.meta
+          projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Jump.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Look.png
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Look.png
+          projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Look.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Look.png.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Look.png.meta
+          projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Look.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Move.png
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Move.png
+          projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Move.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Move.png.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Move.png.meta
+          projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Move.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Sprint.png
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Sprint.png
+          projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Sprint.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Mobile\UI\UI_Icon_Sprint.png.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Mobile\UI\UI_Icon_Sprint.png.meta
+          projectPath: Assets\StarterAssets\Mobile\UI\UI_Icon_Sprint.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Readme.asset
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Readme.asset
+          projectPath: Assets\StarterAssets\Readme.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\Readme.asset.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\Readme.asset.meta
+          projectPath: Assets\StarterAssets\Readme.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\StarterAssets_Documentation_v1.1.pdf
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\StarterAssets_Documentation_v1.1.pdf
+          projectPath: Assets\StarterAssets\StarterAssets_Documentation_v1.1.pdf
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\StarterAssets_Documentation_v1.1.pdf.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\StarterAssets_Documentation_v1.1.pdf.meta
+          projectPath: Assets\StarterAssets\StarterAssets_Documentation_v1.1.pdf.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\TutorialInfo.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\TutorialInfo.meta
+          projectPath: Assets\StarterAssets\TutorialInfo.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\TutorialInfo\Icons.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\TutorialInfo\Icons.meta
+          projectPath: Assets\StarterAssets\TutorialInfo\Icons.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\TutorialInfo\Icons\ReadMeImg.PNG
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\TutorialInfo\Icons\ReadMeImg.PNG
+          projectPath: Assets\StarterAssets\TutorialInfo\Icons\ReadMeImg.PNG
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\TutorialInfo\Icons\ReadMeImg.PNG.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\TutorialInfo\Icons\ReadMeImg.PNG.meta
+          projectPath: Assets\StarterAssets\TutorialInfo\Icons\ReadMeImg.PNG.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\license.txt
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\license.txt
+          projectPath: Assets\StarterAssets\license.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StarterAssets\license.txt.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\StarterAssets\license.txt.meta
+          projectPath: Assets\StarterAssets\license.txt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs
+          projectPath: Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Scripts\Readme.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\TutorialInfo\Scripts\Readme.cs
+          projectPath: Assets\TutorialInfo\Scripts\Readme.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Scripts\Readme.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\TutorialInfo\Scripts\Readme.cs.meta
+          projectPath: Assets\TutorialInfo\Scripts\Readme.cs.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Packages\manifest.json
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectSettings.asset
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2021.dwlt
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\UserSettings\Layouts\default-2021.dwlt
+          projectPath: UserSettings\Layouts\default-2021.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: bfe62c39916e0844a34387bc34b83de07e801756
+        mergeA: 
+        mergeB: 
+        authorName: ActualTomato
+        authorEmail: narenragu@icloud.com
+        commitEmail: narenragu@icloud.com
+        commitName: ActualTomato
+        summary: added basic door placement
+        description: not all rooms are connecting currently, but a single door is
+          randomly being placed in every room
+        timeString: 2022-11-11T00:47:30.000-08:00
+        commitTimeString: 2022-11-11T00:47:30.000-08:00
+        changes:
+        - path: Assets\HouseConstructor.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+          projectPath: Assets\HouseConstructor.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\EBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\EBlock.blend.meta
+          projectPath: Assets\Models\Blocks\EBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\NBlock.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NBlock.blend
+          projectPath: Assets\Models\Blocks\NBlock.blend
+          originalPath: Assets\Models\Blocks\S_NBlock.blend
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\NBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NBlock.blend.meta
+          projectPath: Assets\Models\Blocks\NBlock.blend.meta
+          originalPath: Assets\Models\Blocks\S_NBlock.blend.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\NEBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NEBlock.blend.meta
+          projectPath: Assets\Models\Blocks\NEBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\NWBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NWBlock.blend.meta
+          projectPath: Assets\Models\Blocks\NWBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\SBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SBlock.blend.meta
+          projectPath: Assets\Models\Blocks\SBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\SEBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SEBlock.blend.meta
+          projectPath: Assets\Models\Blocks\SEBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\SWBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SWBlock.blend.meta
+          projectPath: Assets\Models\Blocks\SWBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\WBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend.meta
+          projectPath: Assets\Models\Blocks\WBlock.blend.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 6b2ad3ed7f26920a5bc5a457bcb8e1dd3b4e81ad
+        mergeA: 
+        mergeB: 
+        authorName: ActualTomato
+        authorEmail: narenragu@icloud.com
+        commitEmail: narenragu@icloud.com
+        commitName: ActualTomato
+        summary: working basic floor plan!
+        description: the basic floor plan generation finally works! need to add doors,
+          removed walls, edges, windows etc.
+        timeString: 2022-11-09T23:47:14.000-08:00
+        commitTimeString: 2022-11-09T23:47:14.000-08:00
+        changes:
+        - path: Assets\HouseConstructor.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+          projectPath: Assets\HouseConstructor.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks.meta
+          projectPath: Assets\Models\Blocks.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\EBlock.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\EBlock.blend
+          projectPath: Assets\Models\Blocks\EBlock.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\EBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\EBlock.blend.meta
+          projectPath: Assets\Models\Blocks\EBlock.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\NEBlock.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NEBlock.blend
+          projectPath: Assets\Models\Blocks\NEBlock.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\NEBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NEBlock.blend.meta
+          projectPath: Assets\Models\Blocks\NEBlock.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\NWBlock.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NWBlock.blend
+          projectPath: Assets\Models\Blocks\NWBlock.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\NWBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\NWBlock.blend.meta
+          projectPath: Assets\Models\Blocks\NWBlock.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\New Material.mat
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\New
+            Material.mat
+          projectPath: Assets\Models\Blocks\New Material.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\New Material.mat.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\New
+            Material.mat.meta
+          projectPath: Assets\Models\Blocks\New Material.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\SBlock.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SBlock.blend
+          projectPath: Assets\Models\Blocks\SBlock.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\SBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SBlock.blend.meta
+          projectPath: Assets\Models\Blocks\SBlock.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\SEBlock.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SEBlock.blend
+          projectPath: Assets\Models\Blocks\SEBlock.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\SEBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SEBlock.blend.meta
+          projectPath: Assets\Models\Blocks\SEBlock.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\SWBlock.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SWBlock.blend
+          projectPath: Assets\Models\Blocks\SWBlock.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\SWBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\SWBlock.blend.meta
+          projectPath: Assets\Models\Blocks\SWBlock.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\S_NBlock.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\S_NBlock.blend
+          projectPath: Assets\Models\Blocks\S_NBlock.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\S_NBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\S_NBlock.blend.meta
+          projectPath: Assets\Models\Blocks\S_NBlock.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\WBlock.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend
+          projectPath: Assets\Models\Blocks\WBlock.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\Blocks\WBlock.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\Blocks\WBlock.blend.meta
+          projectPath: Assets\Models\Blocks\WBlock.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 89fbf8301414ace3195555015066cc2c6563168e
+        mergeA: 
+        mergeB: 
+        authorName: ActualTomato
+        authorEmail: 73549035+ActualTomato@users.noreply.github.com
+        commitEmail: 73549035+ActualTomato@users.noreply.github.com
+        commitName: ActualTomato
+        summary: floor plan 3d build prototype
+        description: blocks are placed correctly but incorrectly aligned
+        timeString: 2022-11-09T13:57:45.000-08:00
+        commitTimeString: 2022-11-09T13:57:45.000-08:00
+        changes:
+        - path: .DS_Store
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\.DS_Store
+          projectPath: .DS_Store
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\HouseConstructor.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+          projectPath: Assets\HouseConstructor.cs
+          originalPath: Assets\HouseConstructor2.cs
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\HouseConstructor.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs.meta
+          projectPath: Assets\HouseConstructor.cs.meta
+          originalPath: Assets\HouseConstructor2.cs.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Models.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models.meta
+          projectPath: Assets\Models.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\CornerNE.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerNE.blend
+          projectPath: Assets\Models\CornerNE.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\CornerNE.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerNE.blend.meta
+          projectPath: Assets\Models\CornerNE.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\CornerNW.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerNW.blend
+          projectPath: Assets\Models\CornerNW.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\CornerNW.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerNW.blend.meta
+          projectPath: Assets\Models\CornerNW.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\CornerSE.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerSE.blend
+          projectPath: Assets\Models\CornerSE.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\CornerSE.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerSE.blend.meta
+          projectPath: Assets\Models\CornerSE.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\CornerSW.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerSW.blend
+          projectPath: Assets\Models\CornerSW.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\CornerSW.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\CornerSW.blend.meta
+          projectPath: Assets\Models\CornerSW.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\WallE.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallE.blend
+          projectPath: Assets\Models\WallE.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\WallE.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallE.blend.meta
+          projectPath: Assets\Models\WallE.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\WallN.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallN.blend
+          projectPath: Assets\Models\WallN.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\WallN.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallN.blend.meta
+          projectPath: Assets\Models\WallN.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\WallS.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallS.blend
+          projectPath: Assets\Models\WallS.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\WallS.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallS.blend.meta
+          projectPath: Assets\Models\WallS.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\WallW.blend
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallW.blend
+          projectPath: Assets\Models\WallW.blend
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Models\WallW.blend.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\Models\WallW.blend.meta
+          projectPath: Assets\Models\WallW.blend.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 963819060de93dd1965f120048cc65bf9084e2a5
+        mergeA: 
+        mergeB: 
+        authorName: ActualTomato
+        authorEmail: narenragu@icloud.com
+        commitEmail: narenragu@icloud.com
+        commitName: ActualTomato
+        summary: fixed room generation!
+        description: rooms now split vertically and horizontally without any problems
+        timeString: 2022-11-09T08:47:02.000-08:00
+        commitTimeString: 2022-11-09T08:47:02.000-08:00
+        changes:
+        - path: Assets\HouseConstructor.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs
+          projectPath: Assets\HouseConstructor.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\HouseConstructor.cs.meta
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor.cs.meta
+          projectPath: Assets\HouseConstructor.cs.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\HouseConstructor2.cs
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\Assets\HouseConstructor2.cs
+          projectPath: Assets\HouseConstructor2.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-2021.dwlt
+          fullPath: C:\Users\naren\UnityProjects\HouseGenerator\UserSettings\Layouts\default-2021.dwlt
+          projectPath: UserSettings\Layouts\default-2021.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
       - commitID: c2b19eacd2ed0d7cc91734b2fc92cb412c10e693
         mergeA: 
         mergeB: 
@@ -2506,15 +5156,15 @@ MonoBehaviour:
     detailsScroll: {x: 0, y: 0}
   settingsView:
     gitPathView:
-      gitPath: C:\Program Files\Git\cmd\git.exe
-      gitLfsPath: C:\Program Files\Git\cmd\git-lfs.exe
+      gitPath: /usr/bin/git
+      gitLfsPath: /Users/naren/Downloads/git-lfs-3.2.0/git-lfs
       errorMessage: 
       resetToBundled: 0
       resetToSystem: 0
       changingManually: 0
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2022-12-09T18:17:23.043-08:00
+      updatedTimeString: 2023-02-27T11:56:05.402-08:00
       cacheType: 1
     newRepositoryRemoteUrl: https://github.com/AxisDevTeam/SubMass.git
     repositoryRemoteName: origin
@@ -2527,14 +5177,14 @@ MonoBehaviour:
       newGitEmail: narenragu@icloud.com
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 2022-12-09T18:17:53.179-08:00
+        updatedTimeString: 2023-02-27T11:57:02.859-08:00
         cacheType: 8
     webTimeout: 100000
     gitTimeout: 5000
   locksView:
     currentRemoteHasUpdate: 1
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
+    currentStatusEntriesHasUpdate: 1
+    currentLocksHasUpdate: 1
     keychainHasUpdate: 1
     locksControl:
       scroll: {x: 0, y: 0}
@@ -2554,15 +5204,15 @@ MonoBehaviour:
             email: 
           lockedAtString: 
         gitFileStatus: 0
-        lockedAt: 1 Jan 0001, 00:00
+        lockedAt: 
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2022-11-08T10:03:05.242-08:00
+      updatedTimeString: 2023-03-02T09:49:29.277-08:00
       cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2023-03-03T09:36:09.085-08:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2022-11-08T10:31:51.546-08:00
+      updatedTimeString: 2023-03-03T09:36:08.710-08:00
       cacheType: 6
     lockedFiles: []
     gitStatusEntries: []
@@ -2581,7 +5231,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/AxisDevTeam/SubMass.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 1
+  hasItemsToCommit: 0
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: master
@@ -2592,13 +5242,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2022-11-12T01:20:28.501-08:00
+    updatedTimeString: 2023-02-27T12:06:31.359-08:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2022-11-12T01:20:32.320-08:00
+    updatedTimeString: 2023-02-27T12:06:31.701-08:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2022-11-12T01:20:32.274-08:00
+    updatedTimeString: 2023-02-27T12:09:58.867-08:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull

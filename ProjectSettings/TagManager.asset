@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - house
+  - CinemachineTarget
+  - furniture
+  - displayTest
   layers:
   - Default
   - TransparentFX
