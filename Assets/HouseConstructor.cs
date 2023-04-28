@@ -14,84 +14,165 @@ public class HouseConstructor : MonoBehaviour
 
     public int variation;
 
-    public GameObject WallBlock;
-    public GameObject CornerBlock;
-    public GameObject FloorBlock;
-    public GameObject DoorBlock;
+
+    public GameObject wb;
+    public GameObject cb;
+    public GameObject fb;
+    public GameObject db;
+
+    static public GameObject WallBlock;
+    static public GameObject CornerBlock;
+    static public GameObject FloorBlock;
+    static public GameObject DoorBlock;
 
     //public GameObject[] BLOCK_TYPES;
 
-    public Dictionary<string,GameObject> BLOCK_TYPES;
 
     public float scale = 1f;
 
-
-
-
     // Start is called before the first frame update
-    void Awake()
+    public void OnEnable()
     {
-        BLOCK_TYPES = new Dictionary<string, GameObject>();
-
-        BLOCK_TYPES.Add("wall", WallBlock);
-        BLOCK_TYPES.Add("corner", CornerBlock);
-        BLOCK_TYPES.Add("floor", FloorBlock);
-        BLOCK_TYPES.Add("door", DoorBlock);
+        Debug.Log("reloaded.");
+        if (wb != WallBlock)
+        {
+            WallBlock = wb;
+            CornerBlock = cb;
+            FloorBlock = fb;
+            DoorBlock = db;
+        }
     }
 
     public void HouseFurnish(House h, HouseTemplate template)
     {
+        // iterate through each room template
         foreach(var templateRoom in template.rooms)
         {
-            foreach (var f in templateRoom.furniture)
+            // place required furniture first
+            var orderedList = templateRoom.furnitures.OrderBy(room => (int)room.priority).ToList();
+
+            /*
+            foreach (var e in orderedList)
             {
-                switch (f.priority)
+                Debug.Log(e + " | Priority: " + (int)e.priority);
+            }
+            */
+
+            // iterate through each furniture info in each room template
+            foreach (var f in templateRoom.furnitures)
+            {
+                // find the room
+                Room room = null;
+                int index = 0;
+                foreach (var r in h.floors[0].rooms)
                 {
-                    case FurniturePlacementPriority.required:
+                    index++;
+                    if (r.template == templateRoom)
+                    {
+                        room = r;
+                    }
+                }
+                if (room == null)
+                {
+                    Debug.LogError("something went VERY wrong cause i cant find the room...");
+                }
 
-                        if(f.placement == FurniturePlacement.corner)
+
+                List<Block> blockList = new List<Block>();
+                switch (f.placement)
+                {
+                    case (FurniturePlacement.corner):
+                        foreach(var block in room.blocks)
                         {
-
-                            // find the room
-                            Room room = null;
-                            int index = 0;
-                            foreach (var r in h.floors[0].rooms)
-                            {
-                                index++;
-                                if (r.template == templateRoom)
-                                {
-                                    room = r;
-                                }
+                            if (block.direction.Length == 2) {
+                                blockList.Add(block);
                             }
-                            if(room == null)
-                            {
-                                Debug.LogError("something went VERY wrong cause i cant find the room...");
-                            }
-
-                            // get a randomized list of blocks in the room
-                            var b = room.blocks.OrderBy(x => Random.value).ToList();
-
-                            for (int i = 0; i < b.Count; i++)
-                            {
-                                // go through each block in list, place furniture if corner works
-                                var block = b[i];
-
-                                if (block.direction.Length == 2)
-                                {
-                                    // get the location of the block and initiate place if that fBlock is empty
-                                    var loc = block.GetBlockLocation(h.floors[0]);
-                                    if(h.floors[0].fBlocks[loc[0],loc[1]].isEmpty == true)
-                                    {
-                                        h.floors[0].PlaceFurniture(f.furniture, room,  loc);
-                                        break;
-                                    }
-                                }
-                            }
-
-
                         }
-
                         break;
+
+                    case (FurniturePlacement.wall):
+                        foreach (var block in room.blocks)
+                        {
+                            if (block.direction.Length == 1 && block.direction != "X")
+                            {
+                                blockList.Add(block);
+                            }
+                        }
+                        break;
+
+                    case (FurniturePlacement.floor):
+                        foreach (var block in room.blocks)
+                        {
+                            if (block.direction == "X")
+                            {
+                                blockList.Add(block);
+                            }
+                        }
+                        break;
+                }
+
+                // get a randomized list of blocks in the room
+                var b = blockList.OrderBy(x => Random.value).ToList();
+
+                if (f.priority == FurniturePlacementPriority.required) {
+
+                    for (int i = 0; i < b.Count; i++)
+                    {
+                        // go through each block in list, place furniture if corner works
+                        var block = b[i];
+
+                        {
+                            // get the location of the block and initiate place if that fBlock is empty
+                            var loc = block.GetBlockLocation(h.floors[0]);
+                            if (h.floors[0].fBlocks[loc[0], loc[1]].isEmpty == true)
+                            {
+                                h.floors[0].PlaceFurniture(f.furniture, room, loc);
+                                break;
+                            }
+                        }
+                    }
+                }
+                else if(f.priority == FurniturePlacementPriority.tryInclude)
+                {
+                    for (int i = 0; i < b.Count; i++)
+                    {
+                        // go through each block in list, place furniture if corner works
+                        var block = b[i];
+
+                        {
+                            // get the location of the block and initiate place if that fBlock is empty
+                            var loc = block.GetBlockLocation(h.floors[0]);
+                            if (h.floors[0].fBlocks[loc[0], loc[1]].isEmpty == true)
+                            {
+                                h.floors[0].PlaceFurniture(f.furniture, room, loc);
+                                break;
+                            }
+                        }
+                    }
+                }
+                else if (f.priority == FurniturePlacementPriority.notNeeded)
+                {
+                    var chance = (int)Random.Range(0, 2) == 1;
+                    if (chance)
+                    {
+                        break;
+                    }
+
+                    for (int i = 0; i < b.Count; i++)
+                    {
+                        // go through each block in list, place furniture if corner works
+                        var block = b[i];
+
+                        {
+                            // get the location of the block and initiate place if that fBlock is empty
+                            var loc = block.GetBlockLocation(h.floors[0]);
+                            if (h.floors[0].fBlocks[loc[0], loc[1]].isEmpty == true)
+                            {
+                                h.floors[0].PlaceFurniture(f.furniture, room, loc);
+                                break;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -125,7 +206,7 @@ public class HouseConstructor : MonoBehaviour
             w = Random.Range(template.widthRange.x, template.widthRange.y + 1);
         }
 
-        h = new House(l, w, BLOCK_TYPES, scale);
+        h = new House(l, w, scale);
         int roomCount = template.rooms.Count;
 
         void repeatRoomGen()
@@ -211,14 +292,12 @@ public class HouseConstructor : MonoBehaviour
 public class House
 {
     public List<Floor> floors;
-    Dictionary<string, GameObject> BLOCK_TYPES;
     float scale;
-    public House(int length, int width, Dictionary<string,GameObject> BLOCK_TYPES, float scale)
+    public House(int length, int width, float scale)
     {
         floors = new List<Floor>();
         var f1 = new Floor(length,width);
         floors.Add(f1);
-        this.BLOCK_TYPES = BLOCK_TYPES;
         this.scale = scale;
     }
 
@@ -240,7 +319,7 @@ public class House
                     if (!floors[f].blocks[l, w].type.Equals("null"))
                     {
                         if (!floors[f].blocks[l, w].type.Equals("empty")) {
-                            var go = floors[f].blocks[l, w].ConvertBlock(BLOCK_TYPES);
+                            var go = floors[f].blocks[l, w].ConvertBlock();
 
 
                             var rot = 0;
@@ -277,7 +356,7 @@ public class House
                             }
                         }
 
-                        var floor = GameObject.Instantiate(BLOCK_TYPES["floor"]);
+                        var floor = GameObject.Instantiate(HouseConstructor.FloorBlock);
                         floor.transform.position = new Vector3(l *scale , f * scale, w * scale);
                         floor.transform.rotation = Quaternion.Euler(new Vector3(-90, 90, 0));
                         floor.transform.localScale = new Vector3(scale, scale, scale);
@@ -347,77 +426,125 @@ public class Floor
         rooms.Add(r);
     }
 
-    public bool PlaceFurniture(Furniture furniture, Room room, int[] location)
+    public void CleanBlocks(List<int[]> placedBlocks)
     {
-        var rot = 0;
-        var dir = blocks[location[0], location[1]].direction;
-        var scale = 3;
-        for(int l = 0; l < furniture.length; l++)
+        foreach(var loc in placedBlocks)
+        {
+            fBlocks[loc[0], loc[1]] = new FurnitureBlock();
+        }
+    }
+
+    public bool UpdateFBlock(Furniture furniture, int[] location, Room room, int rot)
+    {
+        List<int[]> placedBlocks = new List<int[]>();
+        for (int l = 0; l < furniture.length; l++)
         {
             for (int w = 0; w < furniture.width; w++)
             {
-                switch (dir)
+                var aL = l;
+                var aW = w;
+                
+                switch (rot)
                 {
-                    case ("NE"):
-                        if (isValid(location[0] + l, location[1] + w) == false || fBlocks[location[0] + l, location[1] + w].isEmpty == false)
-                        {
-                            Debug.Log("furniture place failed");
-                            return false;
-                        }
-                        fBlocks[location[0] + l, location[1] + w].SetFurniture(furniture);
-                        fBlocks[location[0] + l, location[1] + w].isEmpty = false;
+                    case(0):
+                        aL = l;
+                        aW = w;
                         break;
-                    case ("SE"):
-                        if (isValid(location[0] - w, location[1] - l) == false || fBlocks[location[0] - w, location[1] - l].isEmpty == false)
-                        {
-                            Debug.Log("furniture place failed");
-                            return false;
-                        }
-                        fBlocks[location[0] - w, location[1] - l].SetFurniture(furniture);
-                        fBlocks[location[0] - w, location[1] - l].isEmpty = false;
-
-                        rot = 90;
+                    case (90):
+                        aL = w;
+                        aW = -l;
                         break;
-                    case ("NW"):
-                        if (isValid(location[0] + l, location[1] + w) == false || fBlocks[location[0] + l, location[1] + w].isEmpty == false)
-                        {
-                            Debug.Log("furniture place failed");
-                            return false;
-                        }
-                        fBlocks[location[0] + l, location[1] + w].SetFurniture(furniture);
-                        fBlocks[location[0] + l, location[1] + w].isEmpty = false;
-                        rot = 0;
+                    case (180):
+                        aL = -l;
+                        aW = w;
                         break;
-                    case ("SW"):
-                        if (isValid(location[0] + -l, location[1] + -w) == false || fBlocks[location[0] + -l, location[1] + -w].isEmpty == false)
-                        {
-                            Debug.Log("furniture place failed");
-                            return false;
-                        }
-                        fBlocks[location[0] + -l, location[1] + -w].SetFurniture(furniture);
-                        fBlocks[location[0] + -l, location[1] + -w].isEmpty = false;
-                        rot = 180;
+                    case (270):
+                        aL = -w;
+                        aW = l;
                         break;
                 }
+
+                if (isValid(location[0] + aL, location[1] + aW) == false)
+                {
+                    //Debug.Log("Furniture | Cancelled due to invalid block.");
+                    CleanBlocks(placedBlocks);
+                    DebugDrawFurnitureBlocks(); 
+                    return false;
+                }
+                
+                if (fBlocks[location[0] + aL, location[1] + aW].isEmpty == false)
+                {
+                    //Debug.Log("Furniture | Cancelled due to non-empty block." + " | " + (location[0] + aL) + " : " + (location[1] + aW));
+                    CleanBlocks(placedBlocks);
+                    DebugDrawFurnitureBlocks();
+                    return false;
+                }
+                
+                if (GetRoom(blocks[location[0] + aL, location[1] + aW].GetRoomID()) != room)
+                {
+                    //Debug.Log("Furniture | Cancelled due to incorrect room.");
+                    CleanBlocks(placedBlocks);
+                    DebugDrawFurnitureBlocks();
+                    return false;
+                }
+
+                //Debug.Log("Setting block: " + (location[0] + aL) + " : " + (location[1] + aW));
+
+                placedBlocks.Add(new int[2]{location[0] + aL, location[1] + aW});
+                fBlocks[location[0] + aL, location[1] + aW].SetFurniture(furniture);
+                fBlocks[location[0] + aL, location[1] + aW].isEmpty = false;
             }
         }
 
-        var obj = GameObject.Instantiate(furniture.furniture);
-        obj.transform.position = new Vector3(location[0], 0, location[1]) * scale;
-        obj.transform.rotation = Quaternion.Euler(new Vector3(-90, 90, 0) + new Vector3(0, rot, 0)) ;
-        obj.transform.localScale = new Vector3(scale, scale, scale);
-        obj.transform.position += (obj.transform.up * 0.4f * scale) + (obj.transform.right * 0.4f * scale);
-        obj.tag = "furniture";
+        return true;
+    }
 
-        
+    public bool PlaceFurniture(Furniture furniture, Room room, int[] location)
+    {
+        int rot;
+        //var dir = blocks[location[0], location[1]].direction;
+        var scale = 3;
+
+        var result = false;
+
+        for (rot = 0; rot < 360; rot += 90)
+        {
+            var r = rot;
+            result = UpdateFBlock(furniture, location, room, r);
+            //Debug.Log("rot: " + r + " | result: " + result);
+            if (result)
+            {
+                break;
+            }
+        }
+
+        if (result == false)
+        {
+            return false;
+        }
+
+        Debug.Log("Placing furniture " + furniture.furniture.name + " in " + room);
+
+
+        GameObject obj = CreateFurniture(furniture, location, rot, scale);
 
         ColorFurniture(obj, room, furniture);
 
         DebugDrawFurnitureBlocks();
 
         return true;
+    }
 
-        
+    public GameObject CreateFurniture(Furniture furniture, int[] location, int rot, int scale = 3)
+    {
+        var obj = GameObject.Instantiate(furniture.furniture);
+        obj.transform.position = new Vector3(location[0], 0, location[1]) * scale;
+        obj.transform.rotation = Quaternion.Euler(new Vector3(-90, 90, 0) + new Vector3(0, rot, 0));
+        obj.transform.localScale = new Vector3(scale, scale, scale);
+        obj.transform.position += (obj.transform.up * 0.4f * scale) + (obj.transform.right * 0.4f * scale);
+        obj.tag = "furniture";
+
+        return obj;
     }
 
     public void ColorFurniture(GameObject obj, Room room, Furniture fnt)
@@ -1414,15 +1541,14 @@ public class Block
         return d;
     }
 
-    public GameObject ConvertBlock(Dictionary<string, GameObject> BLOCK_TYPES)
+    public GameObject ConvertBlock()
     {
-
         if (direction.Length == 1 && direction != "X")
-            return BLOCK_TYPES["wall"];
+            return HouseConstructor.WallBlock;
         else if (direction.Length == 2)
-            return BLOCK_TYPES["corner"];
+            return HouseConstructor.CornerBlock;
         else if (direction == "X" && type == "empty")
-            return BLOCK_TYPES["floor"];
+            return HouseConstructor.FloorBlock;
         else
             Debug.LogError("Block type not found! | Type: " + type + ", Direction: " + direction);
 

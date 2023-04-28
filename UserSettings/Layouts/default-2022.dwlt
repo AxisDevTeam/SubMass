@@ -15,11 +15,11 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: -1
-    y: 22
+    y: 23
     width: 1440
     height: 878
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 7426
+  controlID: 20
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 7510
+  controlID: 21
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 7613
+  controlID: 22
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -215,8 +215,8 @@ MonoBehaviour:
     y: 0
     width: 712
     height: 398
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 7511
+  controlID: 144
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -350,8 +350,8 @@ MonoBehaviour:
     y: 0
     width: 331
     height: 828
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 25}
   m_Panes:
   - {fileID: 25}
@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 396
-    y: 52
+    y: 53
     width: 710
     height: 377
   m_SerializedDataModeController:
@@ -652,16 +652,16 @@ MonoBehaviour:
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
+    - dockPosition: 0
+      containerId: Floating
+      floating: 1
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 48, y: 48}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapOffset: {x: -108.5, y: -98}
+      snapOffsetDelta: {x: -98.5, y: -144}
+      snapCorner: 3
       id: AINavigationOverlay
-      index: 8
+      index: 0
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
@@ -674,7 +674,7 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: APV Overlay
-      index: 9
+      index: 8
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
@@ -687,7 +687,7 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Cinemachine Tool Settings
-      index: 10
+      index: 9
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
@@ -700,7 +700,7 @@ MonoBehaviour:
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/TrailRenderer
-      index: 11
+      index: 10
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
@@ -714,9 +714,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 12.26011, y: -14.840557, z: 13.373686}
+    m_Target: {x: 13.808384, y: -22.205118, z: 25.489822}
     speed: 2
-    m_Value: {x: 12.26011, y: -14.840557, z: 13.373686}
+    m_Value: {x: 13.808384, y: -22.205118, z: 25.489822}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -762,9 +762,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.49745026, y: -0.50255203, z: 0.49954516, w: 0.5004423}
+    m_Target: {x: 0.5011962, y: -0.49880224, z: 0.5018025, w: 0.498196}
     speed: 2
-    m_Value: {x: 0.4974495, y: -0.50255126, z: 0.49954438, w: 0.50044155}
+    m_Value: {x: 0.50119466, y: -0.4988007, z: 0.50180095, w: 0.49819446}
   m_Size:
     m_Target: 25.85957
     speed: 2
@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: -1
-    y: 52
+    y: 53
     width: 396
     height: 377
   m_SerializedDataModeController:
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: -1
-    y: 450
+    y: 451
     width: 265
     height: 409
   m_SerializedDataModeController:
@@ -1070,9 +1070,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 50760000
-    m_LastClickedID: 30288
-    m_ExpandedIDs: 00000000a87100003a7300003c73000000ca9a3bffffff7f
+    m_SelectedIDs: 82730000
+    m_LastClickedID: 29570
+    m_ExpandedIDs: 00000000b07100004a7300004c73000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1100,7 +1100,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a871000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000b0710000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1127,7 +1127,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 265
-    y: 450
+    y: 451
     width: 239
     height: 409
   m_SerializedDataModeController:
@@ -1192,10 +1192,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 48700000
+      scrollPos: {x: 0, y: 80}
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 34dcffffd4ddffff98e1ffffd0ebffff54edffffc2f2ffff0afbffff
+      m_ExpandedIDs: 0afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1241,7 +1241,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 506
-    y: 450
+    y: 451
     width: 600
     height: 409
   m_SerializedDataModeController:
@@ -1430,7 +1430,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -4592294
+  m_LastSelectedObjectID: 28834
 --- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1504,7 +1504,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 1108
-    y: 52
+    y: 53
     width: 330
     height: 807
   m_SerializedDataModeController:
@@ -5301,13 +5301,13 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: 
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2023-03-09T10:24:00.672-08:00
+      updatedTimeString: 2023-03-31T09:22:48.801-07:00
       cacheType: 1
     lastLocksChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-03-10T09:58:14.129-08:00
+      updatedTimeString: 2023-03-31T09:22:49.156-07:00
       cacheType: 6
     lockedFiles: []
     gitStatusEntries: []

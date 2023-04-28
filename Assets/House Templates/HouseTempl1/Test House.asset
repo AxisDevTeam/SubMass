@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dff62f2c27cc94e6f897d8930647bd88, type: 2}
   - {fileID: 11400000, guid: 1205ae1f98fbe8e45ae9f58e04214c2c, type: 2}
   length: 10
-  width: 10
+  width: 13
   randomSize: 0
   lengthRange: {x: 10, y: 15}
   widthRange: {x: 10, y: 15}

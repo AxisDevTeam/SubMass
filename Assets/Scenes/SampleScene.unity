@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571334, b: 0.3069219, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -339,14 +339,10 @@ MonoBehaviour:
   minRoomDimension: 3
   roomSplitRepetitions: 15
   variation: 5
-  WallBlock: {fileID: 919132149155446097, guid: 0ff5d6da358fc46de98d2b9182c0666d,
-    type: 3}
-  CornerBlock: {fileID: 919132149155446097, guid: a112e3aa72b3547d4a62b7cd0d90059f,
-    type: 3}
-  FloorBlock: {fileID: 919132149155446097, guid: b81ab42694b63e44c9cc53e8f23c9e91,
-    type: 3}
-  DoorBlock: {fileID: 919132149155446097, guid: 0ff5d6da358fc46de98d2b9182c0666d,
-    type: 3}
+  wb: {fileID: 919132149155446097, guid: 0ff5d6da358fc46de98d2b9182c0666d, type: 3}
+  cb: {fileID: 919132149155446097, guid: a112e3aa72b3547d4a62b7cd0d90059f, type: 3}
+  fb: {fileID: 919132149155446097, guid: b81ab42694b63e44c9cc53e8f23c9e91, type: 3}
+  db: {fileID: 919132149155446097, guid: 0ff5d6da358fc46de98d2b9182c0666d, type: 3}
   scale: 3
 --- !u!114 &1377169085
 MonoBehaviour:
@@ -665,11 +661,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3511414528734372770, guid: 1974404d6e72f4e43ad04599bad4c148,
-        type: 3}
-      propertyPath: canPush
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6273711217212134376, guid: 1974404d6e72f4e43ad04599bad4c148,
         type: 3}
       propertyPath: m_RootOrder
@@ -730,43 +721,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCapsule
       objectReference: {fileID: 0}
-    - target: {fileID: 6655022483409750357, guid: 1974404d6e72f4e43ad04599bad4c148,
-        type: 3}
-      propertyPath: Grounded
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6655022483409750357, guid: 1974404d6e72f4e43ad04599bad4c148,
-        type: 3}
-      propertyPath: GroundLayers.m_Bits
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6655022483409750366, guid: 1974404d6e72f4e43ad04599bad4c148,
-        type: 3}
-      propertyPath: m_NeverAutoSwitchControlSchemes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9050450913809106624, guid: 1974404d6e72f4e43ad04599bad4c148,
-        type: 3}
-      propertyPath: headBobSpeed
-      value: 0.1375
-      objectReference: {fileID: 0}
-    - target: {fileID: 9050450913809106624, guid: 1974404d6e72f4e43ad04599bad4c148,
-        type: 3}
-      propertyPath: headBobCorrectSpeed
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 9050450913809106624, guid: 1974404d6e72f4e43ad04599bad4c148,
-        type: 3}
-      propertyPath: verticalHeadBobAmplitude
-      value: 0.025
-      objectReference: {fileID: 0}
-    - target: {fileID: 9050450913809106624, guid: 1974404d6e72f4e43ad04599bad4c148,
-        type: 3}
-      propertyPath: horizontalHeadBobAmplitude
-      value: 0.025
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5932957212495349864, guid: 1974404d6e72f4e43ad04599bad4c148, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

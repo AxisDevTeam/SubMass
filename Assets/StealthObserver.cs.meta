@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 24043c0e1c9524be8a53db770ecc510f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - observerBox: {instanceID: 0}
+  - player: {instanceID: 0}
+  - stealthState: {fileID: 11400000, guid: 43a6a5c9d8ff145aa8de18c35a1f2880, type: 2}
+  - detectedMaterial: {instanceID: 0}
+  - undetectedMaterial: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

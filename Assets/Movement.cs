@@ -47,6 +47,7 @@ public class Movement : MonoBehaviour
             hMove.y = Mathf.Sqrt(2 * jumpSpeed * Mathf.Abs(Physics2D.gravity.y));
 
         cc.Move(hMove);
+
     }
 
     void OnMove(InputValue value)

@@ -9,7 +9,7 @@ public class RoomTemplate : ScriptableObject
     public Color wallColor = Color.white;
     public Color floorColor = Color.gray;
 
-    public List<FurnitureInfo> furniture = new List<FurnitureInfo>();
+    public List<FurnitureInfo> furnitures = new List<FurnitureInfo>();
 }
 
 [System.Serializable]

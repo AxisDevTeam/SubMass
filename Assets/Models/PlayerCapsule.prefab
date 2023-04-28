@@ -76,6 +76,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e1036895cd1b442811691fd8c0b12e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verticalHeadBobAmplitude: 0.025
+  horizontalHeadBobAmplitude: 0.025
+  headBobSpeed: 0.1375
+  headBobMag: 0
+  headBobCorrectSpeed: 0.05
 --- !u!1 &6655022483409750354
 GameObject:
   m_ObjectHideFlags: 0
@@ -114,7 +119,7 @@ Transform:
   - {fileID: 6284498309265963906}
   - {fileID: 5932957212989733289}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &6655022483409750360
 CharacterController:
@@ -124,9 +129,17 @@ CharacterController:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6655022483409750354}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Height: 1.77
   m_Radius: 0.35
   m_SlopeLimit: 45
@@ -159,7 +172,7 @@ MonoBehaviour:
   GroundedRadius: 0.5
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 513
+    m_Bits: 1
   CinemachineCameraTarget: {fileID: 1345864378508226569}
   TopClamp: 89
   BottomClamp: -89
@@ -386,6 +399,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 6273711217212134376}
     m_Modifications:
     - target: {fileID: 9005220659476430818, guid: 2d3a85ecde41a8246a79669975912b74,
@@ -464,6 +478,9 @@ PrefabInstance:
       value: MainCamera
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
 --- !u!4 &6284498309265963906 stripped
 Transform:
@@ -476,6 +493,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 6273711217212134376}
     m_Modifications:
     - target: {fileID: 8762286023885395077, guid: 9c489a8547f4d9e4387da15a4ff82c81,
@@ -568,7 +586,11 @@ PrefabInstance:
       propertyPath: Damping.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8762286024517199035, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
 --- !u!4 &5932957212989733289 stripped
 Transform:
