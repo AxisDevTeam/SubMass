@@ -33,11 +33,17 @@ public class StealthObserver : MonoBehaviour
 
     public float positionSearchRadius = 1.5f;
 
+    public float detectedMovementSpeed = 2.5f;
+    public float defaultMovementSpeed = 1.25f;
+
+    public float hearingDistance = 4f;
+
     // Start is called before the first frame update
     void Start()
     {
         playerCollider = player.GetComponent<CharacterController>();
         nma = GetComponent<NavMeshAgent>();
+        EnemyDispatcher.instance.Register(gameObject);
     }
 
     //Debug.DrawRay(observerBox.transform.position, -(observerBox.transform.position - playerCollider.ClosestPoint(observerBox.transform.position)) * 10, Color.red);
@@ -62,9 +68,11 @@ public class StealthObserver : MonoBehaviour
         if (suspicionLevel == 100)
         {
             isDetected = true;
+            nma.speed = detectedMovementSpeed;
         }
 
 
+        /*
         if (isDetected)
         {
             nma.speed = 2f;
@@ -73,6 +81,7 @@ public class StealthObserver : MonoBehaviour
         {
             nma.speed = 1f;
         }
+        */
 
 
         Debug.DrawRay(lastKnownLocation, Vector3.up*2, new Color(255,110,0));
@@ -91,10 +100,15 @@ public class StealthObserver : MonoBehaviour
                 }
             }
         }
+        else if(suspicionLevel < suspicionThreshold)
+        {
+            nma.speed = defaultMovementSpeed;
+        }
 
         if (lastKnownLocation != Vector3.zero)
         {
-            StartCoroutine(TurnToLocation(lastKnownLocation, turnToLocationSpeed));
+            //StartCoroutine(TurnToLocation(lastKnownLocation, turnToLocationSpeed));
+            //nma.
         }
 
         if (eyeView.colliders.Contains(playerCollider) && hitInfo.collider == playerCollider)
@@ -117,6 +131,15 @@ public class StealthObserver : MonoBehaviour
         }
 
 
+    }
+
+    public void SoundEvent(GameObject soundSource)
+    {
+        if (Vector3.Distance(transform.position, soundSource.transform.position) < hearingDistance)
+        {
+            lastKnownLocation = soundSource.transform.position;
+            suspicionLevel = suspicionThreshold + 1;
+        }
     }
 
     public void updateDetection(float amount)

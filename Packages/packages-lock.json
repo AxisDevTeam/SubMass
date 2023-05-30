@@ -1,5 +1,22 @@
 {
   "dependencies": {
+    "com.baracuda.runtime-monitoring": {
+      "version": "3.5.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "com.singularitygroup.hotreload": {
+      "version": "git+https://gitlab.hotreload.net/root/hot-reload-releases.git#1.10.12",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0"
+      },
+      "hash": "1d3d193d19bede02de04ae4115c6791aeb216dcb"
+    },
     "com.spoiledcat.git": {
       "version": "1.0.12",
       "depth": 0,
